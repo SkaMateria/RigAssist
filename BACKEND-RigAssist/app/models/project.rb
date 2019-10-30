@@ -1,4 +1,4 @@
 class Project < ApplicationRecord
-    belongs_to :users
-    belongs_to :animations
+    belongs_to :user
+    belongs_to :animation
 end

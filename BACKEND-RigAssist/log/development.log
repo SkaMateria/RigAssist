@@ -77,3 +77,447 @@ Migrating to CreateAnimations (20191030201936)
   [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project2"], ["user_id", 1], ["animation_id", 2], ["LIMIT", 1]]
   [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project3"], ["user_id", 1], ["animation_id", 3], ["LIMIT", 1]]
   [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project4"], ["user_id", 2], ["animation_id", 4], ["LIMIT", 1]]
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (42.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (44.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.7ms)[0m  [1m[34mSELECT "animations".* FROM "animations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.5ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 1]]
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.7ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.6ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 3]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.6ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 4]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.6ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 5]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.9ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 6]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Carlos"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Carlos"], ["password", "password"], ["created_at", "2019-10-30 22:10:12.529687"], ["updated_at", "2019-10-30 22:10:12.529687"]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Erin"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Erin"], ["password", "password"], ["created_at", "2019-10-30 22:10:12.540744"], ["updated_at", "2019-10-30 22:10:12.540744"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Becka"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Becka"], ["password", "password"], ["created_at", "2019-10-30 22:10:12.547605"], ["updated_at", "2019-10-30 22:10:12.547605"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Taylor"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Taylor"], ["password", "password"], ["created_at", "2019-10-30 22:10:12.554514"], ["updated_at", "2019-10-30 22:10:12.554514"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Aaron"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Aaron"], ["password", "password"], ["created_at", "2019-10-30 22:10:12.561742"], ["updated_at", "2019-10-30 22:10:12.561742"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.5ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button1"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.6ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button1"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:10:12.569283"], ["updated_at", "2019-10-30 22:10:12.569283"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button2"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button2"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:10:12.576877"], ["updated_at", "2019-10-30 22:10:12.576877"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.4ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button3"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.7ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button3"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:10:12.583796"], ["updated_at", "2019-10-30 22:10:12.583796"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.4ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button4"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button4"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:10:12.591486"], ["updated_at", "2019-10-30 22:10:12.591486"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.4ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button5"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button5"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:10:12.598387"], ["updated_at", "2019-10-30 22:10:12.598387"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.8ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button6"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button6"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:10:12.605566"], ["updated_at", "2019-10-30 22:10:12.605566"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button7"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button7"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:10:12.612186"], ["updated_at", "2019-10-30 22:10:12.612186"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project1"], ["user_id", 6], ["animation_id", 7], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project2"], ["user_id", 6], ["animation_id", 8], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project3"], ["user_id", 6], ["animation_id", 9], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project4"], ["user_id", 7], ["animation_id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProject Load (2.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mAnimation Load (0.5ms)[0m  [1m[34mSELECT "animations".* FROM "animations" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1 LIMIT $2[0m  [["user_id", 6], ["LIMIT", 11]]
+  [1m[36mAnimation Load (1.0ms)[0m  [1m[34mSELECT "animations".* FROM "animations" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (1.1ms)[0m  [1m[34mSELECT "animations".* FROM "animations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.5ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 7]]
+  [1m[35m (41.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.7ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 8]]
+  [1m[35m (33.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.7ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 9]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.8ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 10]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.7ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 11]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.6ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 12]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.5ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 13]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Carlos"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Carlos"], ["password", "password"], ["created_at", "2019-10-30 22:13:23.168380"], ["updated_at", "2019-10-30 22:13:23.168380"]]
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Erin"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Erin"], ["password", "password"], ["created_at", "2019-10-30 22:13:23.217255"], ["updated_at", "2019-10-30 22:13:23.217255"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Becka"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Becka"], ["password", "password"], ["created_at", "2019-10-30 22:13:23.230029"], ["updated_at", "2019-10-30 22:13:23.230029"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Taylor"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Taylor"], ["password", "password"], ["created_at", "2019-10-30 22:13:23.242861"], ["updated_at", "2019-10-30 22:13:23.242861"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Aaron"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Aaron"], ["password", "password"], ["created_at", "2019-10-30 22:13:23.257208"], ["updated_at", "2019-10-30 22:13:23.257208"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 13]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 15]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.7ms)[0m  [1m[34mSELECT "animations".* FROM "animations"[0m
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Carlos"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Carlos"], ["password", "password"], ["created_at", "2019-10-30 22:14:16.784696"], ["updated_at", "2019-10-30 22:14:16.784696"]]
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Erin"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Erin"], ["password", "password"], ["created_at", "2019-10-30 22:14:16.834122"], ["updated_at", "2019-10-30 22:14:16.834122"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Becka"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Becka"], ["password", "password"], ["created_at", "2019-10-30 22:14:16.845910"], ["updated_at", "2019-10-30 22:14:16.845910"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Taylor"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Taylor"], ["password", "password"], ["created_at", "2019-10-30 22:14:16.856954"], ["updated_at", "2019-10-30 22:14:16.856954"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Aaron"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Aaron"], ["password", "password"], ["created_at", "2019-10-30 22:14:16.864766"], ["updated_at", "2019-10-30 22:14:16.864766"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button1"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (1.5ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button1"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:14:16.877786"], ["updated_at", "2019-10-30 22:14:16.877786"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.4ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button2"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.5ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button2"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:14:16.887204"], ["updated_at", "2019-10-30 22:14:16.887204"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.4ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button3"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.5ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button3"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:14:16.910952"], ["updated_at", "2019-10-30 22:14:16.910952"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button4"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button4"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:14:16.918158"], ["updated_at", "2019-10-30 22:14:16.918158"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.4ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button5"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.5ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button5"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:14:16.924669"], ["updated_at", "2019-10-30 22:14:16.924669"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.4ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button6"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.7ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button6"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:14:16.932308"], ["updated_at", "2019-10-30 22:14:16.932308"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button7"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button7"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:14:16.939073"], ["updated_at", "2019-10-30 22:14:16.939073"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project1"], ["user_id", 16], ["animation_id", 14], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project2"], ["user_id", 16], ["animation_id", 15], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project3"], ["user_id", 16], ["animation_id", 16], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project4"], ["user_id", 17], ["animation_id", 17], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  [1m[35m (41.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 19]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 20]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (1.1ms)[0m  [1m[34mSELECT "animations".* FROM "animations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 14]]
+  [1m[35m (41.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.6ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 15]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.6ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 16]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.5ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 17]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 18]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 19]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 20]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Carlos"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Carlos"], ["password", "password"], ["created_at", "2019-10-30 22:15:43.525606"], ["updated_at", "2019-10-30 22:15:43.525606"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Erin"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Erin"], ["password", "password"], ["created_at", "2019-10-30 22:15:43.533403"], ["updated_at", "2019-10-30 22:15:43.533403"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Becka"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Becka"], ["password", "password"], ["created_at", "2019-10-30 22:15:43.540419"], ["updated_at", "2019-10-30 22:15:43.540419"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Taylor"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Taylor"], ["password", "password"], ["created_at", "2019-10-30 22:15:43.547683"], ["updated_at", "2019-10-30 22:15:43.547683"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Aaron"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Aaron"], ["password", "password"], ["created_at", "2019-10-30 22:15:43.554822"], ["updated_at", "2019-10-30 22:15:43.554822"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button1"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.5ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button1"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:15:43.576018"], ["updated_at", "2019-10-30 22:15:43.576018"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button2"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button2"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:15:43.583589"], ["updated_at", "2019-10-30 22:15:43.583589"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button3"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button3"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:15:43.590246"], ["updated_at", "2019-10-30 22:15:43.590246"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.4ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button4"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button4"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:15:43.597147"], ["updated_at", "2019-10-30 22:15:43.597147"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.4ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button5"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.5ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button5"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:15:43.604384"], ["updated_at", "2019-10-30 22:15:43.604384"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.4ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button6"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button6"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:15:43.611396"], ["updated_at", "2019-10-30 22:15:43.611396"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button7"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.5ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button7"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:15:43.618926"], ["updated_at", "2019-10-30 22:15:43.618926"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project1"], ["user_id", 21], ["animation_id", 21], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project2"], ["user_id", 21], ["animation_id", 22], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project3"], ["user_id", 21], ["animation_id", 23], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project4"], ["user_id", 22], ["animation_id", 24], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1 LIMIT $2[0m  [["user_id", 21], ["LIMIT", 11]]
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 21]]
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 22]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 24]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 25]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.8ms)[0m  [1m[34mSELECT "animations".* FROM "animations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 21]]
+  [1m[35m (41.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.6ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 22]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.8ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 23]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 24]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 25]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 26]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Destroy (0.7ms)[0m  [1m[31mDELETE FROM "animations" WHERE "animations"."id" = $1[0m  [["id", 27]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Carlos"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Carlos"], ["password", "password"], ["created_at", "2019-10-30 22:20:19.517275"], ["updated_at", "2019-10-30 22:20:19.517275"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Erin"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Erin"], ["password", "password"], ["created_at", "2019-10-30 22:20:19.525189"], ["updated_at", "2019-10-30 22:20:19.525189"]]
+  [1m[35m (41.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Becka"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Becka"], ["password", "password"], ["created_at", "2019-10-30 22:20:19.574603"], ["updated_at", "2019-10-30 22:20:19.574603"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Taylor"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Taylor"], ["password", "password"], ["created_at", "2019-10-30 22:20:19.586122"], ["updated_at", "2019-10-30 22:20:19.586122"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "Aaron"], ["password", "password"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Aaron"], ["password", "password"], ["created_at", "2019-10-30 22:20:19.597128"], ["updated_at", "2019-10-30 22:20:19.597128"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button1"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.5ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button1"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:20:19.606198"], ["updated_at", "2019-10-30 22:20:19.606198"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.4ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button2"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button2"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:20:19.612968"], ["updated_at", "2019-10-30 22:20:19.612968"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button3"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button3"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:20:19.619842"], ["updated_at", "2019-10-30 22:20:19.619842"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.4ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button4"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button4"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:20:19.626799"], ["updated_at", "2019-10-30 22:20:19.626799"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.4ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button5"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button5"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:20:19.633980"], ["updated_at", "2019-10-30 22:20:19.633980"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button6"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button6"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:20:19.640379"], ["updated_at", "2019-10-30 22:20:19.640379"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAnimation Load (0.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."name" = $1 AND "animations"."settings" = $2 LIMIT $3[0m  [["name", "Button7"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimation Create (0.4ms)[0m  [1m[32mINSERT INTO "animations" ("name", "settings", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Button7"], ["settings", "{rotateX: 20, color: blue, positionX: 3}"], ["created_at", "2019-10-30 22:20:19.646637"], ["updated_at", "2019-10-30 22:20:19.646637"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project1"], ["user_id", 26], ["animation_id", 28], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mAnimation Load (0.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mProject Create (0.9ms)[0m  [1m[32mINSERT INTO "projects" ("name", "user_id", "animation_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Project1"], ["user_id", 26], ["animation_id", 28], ["created_at", "2019-10-30 22:20:19.677025"], ["updated_at", "2019-10-30 22:20:19.677025"]]
+  [1m[35m (17.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project2"], ["user_id", 26], ["animation_id", 29], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mAnimation Load (0.6ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mProject Create (0.6ms)[0m  [1m[32mINSERT INTO "projects" ("name", "user_id", "animation_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Project2"], ["user_id", 26], ["animation_id", 29], ["created_at", "2019-10-30 22:20:19.710148"], ["updated_at", "2019-10-30 22:20:19.710148"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project3"], ["user_id", 26], ["animation_id", 30], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mAnimation Load (0.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mProject Create (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "user_id", "animation_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Project3"], ["user_id", 26], ["animation_id", 30], ["created_at", "2019-10-30 22:20:19.722179"], ["updated_at", "2019-10-30 22:20:19.722179"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = $1 AND "projects"."user_id" = $2 AND "projects"."animation_id" = $3 LIMIT $4[0m  [["name", "Project4"], ["user_id", 27], ["animation_id", 31], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[36mAnimation Load (0.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mProject Create (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "user_id", "animation_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Project4"], ["user_id", 27], ["animation_id", 31], ["created_at", "2019-10-30 22:20:19.743531"], ["updated_at", "2019-10-30 22:20:19.743531"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProject Load (7.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mAnimation Load (0.6ms)[0m  [1m[34mSELECT "animations".* FROM "animations" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAnimation Load (1.5ms)[0m  [1m[34mSELECT "animations".* FROM "animations" INNER JOIN "projects" ON "animations"."id" = "projects"."animation_id" WHERE "projects"."user_id" = $1 LIMIT $2[0m  [["user_id", 26], ["LIMIT", 11]]
