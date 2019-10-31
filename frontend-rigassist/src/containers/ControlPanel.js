@@ -9,7 +9,8 @@ export class ControlPanel extends Component {
         )
     }
 }
-
+fucntion whatever => ()
+askdjf
 a;sldkfjkadsfn
 dfka
 
