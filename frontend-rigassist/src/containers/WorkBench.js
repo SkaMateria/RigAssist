@@ -6,7 +6,6 @@ export class WorkBench extends Component {
         return (
             <div>
                 <ControlPanel/>
-                last one
             </div>
         )
     }
