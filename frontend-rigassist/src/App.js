@@ -32,14 +32,6 @@ class App extends React.Component {
       console.log("animations:",data3)
     })
   }
-  // componentDidMount() {
-  //   fetch(USERS_URL)
-  //   .then(res => res.json())
-  //   .then(data => {
-  //     console.log(data)
-  //   })
-  // }
-
 
   render(){
     return (

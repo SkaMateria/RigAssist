@@ -720,3 +720,24 @@ Completed 200 OK in 34ms (Views: 5.7ms | ActiveRecord: 27.7ms | Allocations: 450
 Completed 200 OK in 31ms (Views: 7.1ms | ActiveRecord: 23.7ms | Allocations: 4382)
 
 
+Started GET "/users" for ::1 at 2019-10-31 15:26:06 -0400
+Started GET "/projects" for ::1 at 2019-10-31 15:26:06 -0400
+Started GET "/animations" for ::1 at 2019-10-31 15:26:06 -0400
+Processing by UsersController#index as */*
+Processing by AnimationsController#index as */*
+  [1m[36mUser Load (398.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Completed 200 OK in 412ms (Views: 10.2ms | ActiveRecord: 398.3ms | Allocations: 1890)
+
+
+Processing by ProjectsController#index as */*
+  [1m[36mAnimation Load (30.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations"[0m
+  ↳ app/controllers/animations_controller.rb:3:in `index'
+  [1m[36mProject Load (32.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:3:in `index'
+Completed 200 OK in 458ms (Views: 426.9ms | ActiveRecord: 30.3ms | Allocations: 3490)
+
+
+Completed 200 OK in 39ms (Views: 5.4ms | ActiveRecord: 32.7ms | Allocations: 2858)
+
+
