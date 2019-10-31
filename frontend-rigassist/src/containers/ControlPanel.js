@@ -9,14 +9,5 @@ export class ControlPanel extends Component {
         )
     }
 }
-fucntion whatever => ()
-askdjf
-a;sldkfjkadsfn
-dfka
-
-sd;lfkjasdfj
-alsdkfja
-
-
 
 export default ControlPanel
