@@ -14,8 +14,8 @@ class App extends React.Component {
     super()
     this.state = {
       allUsers: [],
+      allProjects: [],
       allAnimations: [],
-      allProjects: []
     }
   }
 
@@ -26,11 +26,11 @@ class App extends React.Component {
       fetch(ANIMATIONS_URL)
     ])
     .then(([res1, res2, res3]) => Promise.all([res1.json(), res2.json(), res3.json()]))
-    .then(([data1, data2, data3]) => {
-      console.log("users:",data1)
-      console.log("projects:",data2)
-      console.log("animations:",data3)
-    })
+    .then(([users, projects, animations]) => this.setState({
+      allUsers: users,
+      allProjects: projects,
+      allAnimations: animations
+    }))
   }
 
   render(){
