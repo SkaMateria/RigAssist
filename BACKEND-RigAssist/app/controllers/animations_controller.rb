@@ -10,7 +10,7 @@ class AnimationsController < ApplicationController
 
     def update
     end
-
+    
     def edit
     end
 
