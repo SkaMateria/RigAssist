@@ -39,7 +39,7 @@ export default class WorkBench extends Component {
 			return (
 				<div>
 				{/* <div className={this.state.style} onClick={this.colorChange} ></div> */}
-				<TestObject/>
+				<TestObject clackHandler={this.colorChange}/>
 				<ControlPanel/>
 			</div>
 		)
