@@ -10,38 +10,50 @@ const PROJECTS_URL = `${BASE_URL}/projects`
 const ANIMATIONS_URL = `${BASE_URL}/animations`
 
 class App extends React.Component {
-  constructor(){
-    super()
-    this.state = {
-      allUsers: [],
-      allProjects: [],
-      allAnimations: [],
-    }
-  }
+	constructor(){
+		super()
+		this.state = {
+			allUsers: [],
+			allProjects: [],
+			allAnimations: [],
+		}
+	}
 
-  componentDidMount() {
-    Promise.all([
-      fetch(USERS_URL),
-      fetch(PROJECTS_URL),
-      fetch(ANIMATIONS_URL)
-    ])
-    .then(([res1, res2, res3]) => Promise.all([res1.json(), res2.json(), res3.json()]))
-    .then(([users, projects, animations]) => this.setState({
-      allUsers: users,
-      allProjects: projects,
-      allAnimations: animations
-    }))
-  }
+	componentDidMount() {
+		Promise.all([
+			fetch(USERS_URL),
+			fetch(PROJECTS_URL),
+			fetch(ANIMATIONS_URL)
+		])
+		.then(([res1, res2, res3]) => Promise.all([res1.json(), res2.json(), res3.json()]))
+		.then(([users, projects, animations]) => this.setState({
+			allUsers: users,
+			allProjects: projects,
+			allAnimations: animations
+		}))
+	}
 
-  render(){
-    return (
-      <div>
-        <NavBar/>
-        <FolderNavigator/>
-        <WorkBench/>
-      </div>
-    );
-  }
+	render(){
+		return (
+			<div>
+				<NavBar/>
+				<FolderNavigator/>
+				<WorkBench/>
+			</div>
+		);
+	}
 }
 
 export default App;
+
+import React, { Component } from 'react'
+
+export default class App extends Component {
+	render() {
+		return (
+			<div>
+				
+			</div>
+		)
+	}
+}
