@@ -12,14 +12,20 @@ const rotate = keyframes`
 `
 
 const Box = styled.div.attrs(props => ({
-	color: props.color
+	color: props.state.color,
+	animationLength: props.state.animationLength,
 }))`
 	width: 64px
 	height: 64px
 	margin: 0 auto
 	background-color: ${props => props.color}
-	animation: ${rotate} 2s linear infinite
+	animation: ${rotate} ${props => props.animationLength}
 `
+		/*//& --NOTE--
+			UrlRef = https://www.w3schools.com/cssref/css3_pr_animation.asp
+			//! animation: name | duration | timing-function | delay | iteration-count | direction | fill-mode | play-state
+			*/
+
 
 export default class TestObject extends React.Component{
 	constructor(props) {
@@ -29,7 +35,7 @@ export default class TestObject extends React.Component{
 			color: this.props.backgroundColor,
 			width: "64px",
 			height: "64px",
-			animationLength: "2s linear infinite",
+			animationLength: "2s linear 10 reverse",
 		}
 	}
 	
@@ -40,7 +46,7 @@ export default class TestObject extends React.Component{
   render() {
 		return(
 			<div>
-        <Box onClick={this.clickHandler} color={this.state.color} ></Box>
+        <Box onClick={this.clickHandler} state={this.state} ></Box>
 			</div>
     )
   }
