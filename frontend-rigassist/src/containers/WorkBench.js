@@ -24,7 +24,7 @@ export default class WorkBench extends Component {
 		// console.log("before click:",styleProps)
 		// this.setState({
 			// 	style: "box_clicked"
-			// })
+			// })`
 			// console.log("after click:", styleProps)			
 			// let x = this	
 			// let node = ReactDOM.findDOMNode(this.firstElementChild)
@@ -45,6 +45,3 @@ export default class WorkBench extends Component {
 		)
 	}
 }
-// export default WorkBench
-		
-		
