@@ -12,7 +12,7 @@ export default class WorkBench extends Component {
 	constructor() {
 		super()
 		this.state = {
-			style: "box"
+			backgroundColor: "blue",
 		}	
 	}
 	
@@ -39,7 +39,7 @@ export default class WorkBench extends Component {
 			return (
 				<div>
 				{/* <div className={this.state.style} onClick={this.colorChange} ></div> */}
-				<TestObject clackHandler={this.colorChange}/>
+				<TestObject backgroundColor={this.state.backgroundColor} />
 				<ControlPanel/>
 			</div>
 		)
