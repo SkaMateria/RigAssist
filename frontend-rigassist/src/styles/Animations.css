@@ -1,0 +1,15 @@
+.box_clicked {
+  width: 60px;
+  height: 60px;
+  background-color: royalblue;
+  animation-fill-mode: forwards;
+  animation-name: colorChange; 
+  animation-duration: 4s;
+}
+
+@keyframes colorChange {
+  from {background-color: royalblue;}
+  to {background-color: red;}
+}
+
+
