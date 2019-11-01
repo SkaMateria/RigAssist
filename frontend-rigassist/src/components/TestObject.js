@@ -28,4 +28,3 @@ export default class TestObject extends React.Component{
     )
   }
 }
-
