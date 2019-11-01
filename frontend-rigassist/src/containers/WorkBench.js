@@ -4,14 +4,9 @@ import ControlPanel from './ControlPanel';
 import '../styles/Animations.css'
 import styles from '../styles/Components.css'
 import styled from 'styled-components'
+import TestObject from '../components/TestObject'
 
-const Ball = styled.div`
-	width: 64px;
-	height: 64px;
-	border-radius: 50%;
-	margin: 0 auto;
-	background-color: red;
-`;
+
 
 export default class WorkBench extends Component {
 	constructor() {
@@ -44,7 +39,7 @@ export default class WorkBench extends Component {
 			return (
 				<div>
 				{/* <div className={this.state.style} onClick={this.colorChange} ></div> */}
-				<Ball></Ball>
+				<TestObject/>
 				<ControlPanel/>
 			</div>
 		)
