@@ -1,15 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Ball1 = styled.div`
+const Box = styled.div`
 	width: 64px;
 	height: 64px;
-	border-radius: 50%;
 	margin: 0 auto;
 	background-color: red;
 `;
 
-const Ball2 = styled.div`
+const Ball = styled.div`
 	width: 64px;
 	height: 64px;
 	border-radius: 50%;
@@ -22,8 +21,8 @@ export default class TestObject extends React.Component{
   render() {
     return(
       <div>
-        <Ball1></Ball1>
-        <Ball2></Ball2>
+        <Box></Box>
+        <Ball></Ball>
       </div>
     )
   }
