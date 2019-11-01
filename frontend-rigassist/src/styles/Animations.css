@@ -3,7 +3,6 @@
   height: 60px;
   background-color: royalblue;
   animation-fill-mode: forwards;
-  animation-name: colorChange; 
   animation-duration: 4s;
 }
 
