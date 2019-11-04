@@ -50,7 +50,6 @@ const Box = styled.div.attrs(props => ({
 			width: "64px",
 			height: "64px",
 			animationLength: "2s ease-in-out infinite normal",
-			animationPlayState: "running"
 		}
 	}
 	
