@@ -16,6 +16,7 @@ const rotate = keyframes`
 const Box = styled.div.attrs(props => ({
 	color: props.state.color,
 	animationLength: props.state.animationLength,
+	animationPlayState: props.state.animationPlayState
 }))`
 	width: 50px
 	height: 50px
@@ -23,9 +24,8 @@ const Box = styled.div.attrs(props => ({
 	left: 0%
 	bottom: 0px
 	margin: 0 auto
+	animation: ${rotate} ${props => props.animationLength} ${props => props.animationPlayState}
 	background-color: ${props => props.color}
-	animation: ${rotate} ${props => props.animationLength}
-	animation-play-state: ${props => props.animationPlayState}
 `
 		/*//& --NOTE--
 			UrlRef = https://www.w3schools.com/cssref/css3_pr_animation.asp
@@ -40,7 +40,8 @@ const Box = styled.div.attrs(props => ({
 			*/
 
 
-export default class TestObject extends React.Component{
+
+			export default class TestObject extends React.Component{
 	constructor(props) {
 		super(props)
 		
@@ -53,18 +54,27 @@ export default class TestObject extends React.Component{
 		}
 	}
 	
-	
-	pauseClick = () => {
-		
+	buttonClick = () => {
+			this.state.animationPlayState === "running" ? this.pauseClick() : this.playClick()
+	}
+
+	pauseClick(){
+		this.setState({
+			animationPlayState: "paused"
+		})
+	}
+
+	playClick(){
+		this.setState({
+			animationPlayState: "running"
+		})
 	}
 
   render() {
 		return(
 			<div>
-        <Box onClick={this.pauseClick} state={this.state} ></Box>
+        <Box onClick={this.buttonClick} state={this.state} ></Box>
 			</div>
     )
   }
 }
-
-
