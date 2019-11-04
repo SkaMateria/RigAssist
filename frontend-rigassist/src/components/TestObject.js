@@ -20,7 +20,7 @@ const Box = styled.div.attrs(props => ({
 }))`
 	width: 50px
 	height: 50px
-	position: relative
+	position: absolute
 	left: 0%
 	bottom: 0px
 	margin: 0 auto
