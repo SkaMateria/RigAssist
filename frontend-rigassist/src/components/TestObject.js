@@ -19,11 +19,6 @@ const rotate = keyframes`
 			visible;
 	}
 
-	50% {
-		visibility:
-			collapse;
-	}
-
 	100% {
 		transform: 
 			rotate(360deg) scale(2.0, 2.0) translate(0px, 0px) scaleX(2.0) scaleY(3.0) skew(50deg, 100deg);
