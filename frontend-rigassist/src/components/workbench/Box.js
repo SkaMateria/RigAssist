@@ -11,7 +11,6 @@ const customAnimation = keyframes`
 		filter:
 			blur(10px) contrast(10%);
 	}
-
 	50% {
 		filter:
 			blur(3px) contrast(80%) drop-shadow(10px 10px 4px black);
@@ -29,14 +28,14 @@ const customAnimation = keyframes`
 	}
 `
 
-/*//& --NOTE(Properties)
-	//! all of these will be followed by a :
-	//: opacity: 0.0-1.0 
-	//: filter: blur:px || brightness:0.0-inf || contrast:0%-inf || greyscale:0%-100% || hue-rotate:0deg-359deg || 
-	//: filter: drop-shadow(infpx infpx infpx color) || invert: 0-100% || opacity: 0-100% || saturate:0-inf% || sepia:0-100%
-	//? object-position can be %, px, or right, left top bottom center
-	*/
-/*//& --NOTE(animation)--
+  /*//& --NOTE(Properties)
+    //! all of these will be followed by a :
+    //: opacity: 0.0-1.0 
+    //: filter: blur:px || brightness:0.0-inf || contrast:0%-inf || greyscale:0%-100% || hue-rotate:0deg-359deg || 
+    //: filter: drop-shadow(infpx infpx infpx color) || invert: 0-100% || opacity: 0-100% || saturate:0-inf% || sepia:0-100%
+    //? object-position can be %, px, or right, left top bottom center
+    */
+  /*//& --NOTE(animation)--
 			UrlRef = https://www.w3schools.com/cssref/css3_pr_animation.asp
 			//* if the word has @ in front of it, it should read out "animation-" i.e. @duration = animation-duration
 			//: animation: name | @duration | @timing-function | @delay | @iteration-count | @direction | @fill-mode | @play-state
@@ -50,6 +49,7 @@ const customAnimation = keyframes`
 
 
   const Box = styled.div.attrs(props => ({
+  name: props.state.animation.name,
   animationShortHand: "2s ease-in-out infinite alternate",
 	animationPlayState: props.state.animation.playState
 }))`
@@ -59,7 +59,7 @@ const customAnimation = keyframes`
 	left: 50%
 	top: 50%
 	margin: 0 auto
-	animation: ${customAnimation} ${props => props.animationShortHand} ${props => props.animationPlayState}
+	animation: ${props => props.name} ${props => props.animationShortHand} ${props => props.animationPlayState}
 	background-color: blue
 `
 

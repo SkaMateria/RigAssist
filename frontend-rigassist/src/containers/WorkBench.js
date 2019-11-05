@@ -61,7 +61,7 @@ export default class WorkBench extends Component {
 				color: "0",
 			},
 			animation: {
-				name: "0",
+				name: "customAnimation",
 				duration: "0",
 				timingFunction: "0",
 				delay: "0",
