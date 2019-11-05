@@ -1,32 +1,5 @@
 import styled, {keyframes} from 'styled-components'
-
-const customAnimation = keyframes`
-	0% {
-		left:
-			40%;
-		top:
-			40%;
-		transform:
-			rotate(0turn) scale(0.2, .2) translate(0px, 0px) skew(0deg, 0deg);
-		filter:
-			blur(10px) contrast(10%);
-	}
-	50% {
-		filter:
-			blur(3px) contrast(80%) drop-shadow(10px 10px 4px black);
-	} 
-
-	100% {
-		left:
-			50%;
-		top:
-			50%;
-		transform: 
-			rotate(3turn) scale(2.5, 1.0) translate(0px, 0px) skew(10deg, 10deg);
-		filter:
-			blur(1px) contrast(100%) drop-shadow(1px 1px 2px white);
-	}
-`
+import {customAnimation} from './Animations'
 
   /*//& --NOTE(Properties)
     //! all of these will be followed by a :
@@ -48,25 +21,25 @@ const customAnimation = keyframes`
 			*/
 
 
-  const Box = styled.div.attrs(prp => ({
+  const Box = styled.div.attrs(props => ({
   superShort: `
-    ${prp.state.duration} 
-    ${prp.state.timingFunction} 
-    ${prp.state.delay} 
-    ${prp.state.iterationCount} 
-    ${prp.state.direction} 
-    ${prp.state.fillMode} 
-    ${prp.state.playState}
-    `
+    ${props.animation.duration} 
+    ${props.animation.timingFunction} 
+    ${props.animation.delay} 
+    ${props.animation.iterationCount} 
+    ${props.animation.direction} 
+    ${props.animation.fillMode} 
+    ${props.animation.playState}
+    `,
+    object: props.object,
 }))`
-	width: 60px
-	height: 60px
-	position: fixed
-	left: 50%
-	top: 50%
-	margin: 0 auto
-	animation: ${customAnimation} ${prp => prp.superShort}
-	background-color: blue
+	width: ${props => props.object.width}
+	height: ${props => props.object.height}
+	position: ${props => props.object.position}
+	left: ${props => props.object.left}
+	top: ${props => props.object.top}
+	animation: ${customAnimation} ${props => props.superShort}
+	background-color: ${props => props.object.color}
 `
 
 export default Box;

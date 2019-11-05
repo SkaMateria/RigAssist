@@ -53,12 +53,12 @@ export default class WorkBench extends Component {
 		super()
 		this.state = {
 			objectOrigin: {
-				xAxis: "0%",
-				yAxis: "0%",
+				left: "50%",
+				top: "50%",
 				width: "60px",
 				height: "60px",
 				position: "fixed",
-				color: "blue",
+				color: "red",
 			},
 			animation: {
 				name: "",
@@ -70,7 +70,7 @@ export default class WorkBench extends Component {
 				fillMode: "forwards",
 				playState: "running",
 			},
-			keyFrames: {
+			keyframes: {
 				stage: "0",
 				xAxis: "0",
 				yAxis: "0",
@@ -110,7 +110,13 @@ export default class WorkBench extends Component {
 		render() {
 			return (
 				<div>
-					<Box state={this.state.animation} />
+					<Box 
+						object={this.state.objectOrigin}
+						animation={this.state.animation}
+						keyframes={this.state.keyframes}
+						transform={this.state.transform}
+						filter={this.state.filter}
+					/>
 					<ControlPanel/>
 					<PlayerRemote animation={this.state.animation} handlePause={this.handlePause} handlePlay={this.handlePlay} />
 			</div>
