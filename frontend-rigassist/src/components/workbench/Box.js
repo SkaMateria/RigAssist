@@ -1,4 +1,3 @@
-import React from 'react'
 import styled, {keyframes} from 'styled-components'
 
 const customAnimation = keyframes`
@@ -28,8 +27,8 @@ const customAnimation = keyframes`
 		filter:
 			blur(1px) contrast(100%) drop-shadow(1px 1px 2px white);
 	}
-
 `
+
 /*//& --NOTE(Properties)
 	//! all of these will be followed by a :
 	//: opacity: 0.0-1.0 
@@ -37,22 +36,7 @@ const customAnimation = keyframes`
 	//: filter: drop-shadow(infpx infpx infpx color) || invert: 0-100% || opacity: 0-100% || saturate:0-inf% || sepia:0-100%
 	//? object-position can be %, px, or right, left top bottom center
 	*/
-
-const Box = styled.div.attrs(props => ({
-	color: props.state.color,
-	animationShortHand: props.state.animationShortHand,
-	animationPlayState: props.state.animationPlayState
-}))`
-	width: 60px
-	height: 60px
-	position: fixed
-	left: 50%
-	top: 50%
-	margin: 0 auto
-	animation: ${customAnimation} ${props => props.animationShortHand} ${props => props.animationPlayState}
-	background-color: blue
-`
-		/*//& --NOTE(animation)--
+/*//& --NOTE(animation)--
 			UrlRef = https://www.w3schools.com/cssref/css3_pr_animation.asp
 			//* if the word has @ in front of it, it should read out "animation-" i.e. @duration = animation-duration
 			//: animation: name | @duration | @timing-function | @delay | @iteration-count | @direction | @fill-mode | @play-state
@@ -65,43 +49,18 @@ const Box = styled.div.attrs(props => ({
 			*/
 
 
+  const Box = styled.div.attrs(props => ({
+  animationShortHand: "2s ease-in-out infinite alternate",
+	animationPlayState: props.state.animation.playState
+}))`
+	width: 60px
+	height: 60px
+	position: fixed
+	left: 50%
+	top: 50%
+	margin: 0 auto
+	animation: ${customAnimation} ${props => props.animationShortHand} ${props => props.animationPlayState}
+	background-color: blue
+`
 
-			export default class TestObject extends React.Component{
-	constructor(props) {
-		super(props)
-		
-		this.state = {
-			color: this.props.backgroundColor,
-			width: "64px",
-			height: "64px",
-			animationShortHand: "2s ease-in-out infinite alternate",
-		}
-	} 
-	
-	buttonClick = () => {
-			this.state.animationPlayState === "running" ? this.pauseClick() : this.playClick()
-	}
-
-	pauseClick(){
-		this.setState({
-			animationPlayState: "paused"
-		})
-	}
-
-	playClick(){
-		this.setState({
-			animationPlayState: "running"
-		})
-	}
-
-  render() {
-		return(
-			<div>
-        <Box onClick={this.buttonClick} state={this.state} ></Box>
-			</div>
-    )
-  }
-}
-
-
-
+export default Box;

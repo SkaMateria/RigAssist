@@ -1,37 +1,38 @@
 import React, {Component} from 'react'
 
 export default class PlayerRemote extends Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state = {
-      playState: this.props.animation.playState,
-      iterationCount: this.props.animation.iterationCount,
-      direction: this.props.animation.direction,
+      playState: props.animation.playState,
+      // iterationCount: this.props.animation.iterationCount,
+      // direction: this.props.animation.direction,
     }
+    // this.pauseClick = this.pauseClick.bind(this)
+    // this.playClick = this.playClick.bind(this)
   }
 
   buttonClick = () => {
-    this.state.playState === "running" ? this.pauseClick() : this.playClick()
+    console.log(this.state.playState)
+    // this.state.playState === "running" ? this.pauseClick() : this.playClick()
   }
   
-  pauseClick(){
-  this.setState({
-    animationPlayState: "paused"
-    })
-  }
+  // pauseClick(){
+  //   this.props.handlePause
+  // }
   
-  playClick(){
-  this.setState({
-    animationPlayState: "running"
-    })
-  }
+  // playClick(){
+  // this.setState({
+  //   playState: "running"
+  //   })
+  // }
 
 
   render(){
     return(
       <div>
-        <button>PLAY</button>
-        <button>PAUSE</button>
+        <button onClick={this.props.handlePlay}> PLAY </button>
+        <button onClick={this.props.handlePause} >PAUSE</button>
         <button>LOOP SETTINGS</button>
         <button>DIRECTION SETTINGS</button>
       </div>

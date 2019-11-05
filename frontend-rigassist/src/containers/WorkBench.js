@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import ControlPanel from './ControlPanel';
 import TestObject from '../components/workbench/TestObject'
 import PlayerRemote from '../components/workbench/PlayerRemote'
+import Box from '../components/workbench/Box'
 
-export default class WorkBench extends Component {
-	constructor() {
-		super()
-		/*//&___this.state DRAFT____
+/*//&___this.state DRAFT____
 		 this.state = {
 			 objectOrigin: {
 				 xAxis: "50%",
@@ -51,57 +49,71 @@ export default class WorkBench extends Component {
 			 }
 		 }
 		 */
+export default class WorkBench extends Component {
+	constructor() {
+		super()
 		this.state = {
 			objectOrigin: {
-				xAxis: "",
-				yAxis: "",
-				width: "",
-				height: "",
-				position: "",
-				color: "",
+				xAxis: "0",
+				yAxis: "0",
+				width: "0",
+				height: "0",
+				position: "0",
+				color: "0",
 			},
 			animation: {
-				name: "",
-				duration: "",
-				timingFunction: "",
-				delay: "",
-				iterationCount: "",
-				direction: "",
-				fillMode: "",
-				playState: "",
+				name: "0",
+				duration: "0",
+				timingFunction: "0",
+				delay: "0",
+				iterationCount: "0",
+				direction: "0",
+				fillMode: "0",
+				playState: "running",
 			},
 			keyFrames: {
-				stage: "",
-				xAxis: "",
-				yAxis: "",
+				stage: "0",
+				xAxis: "0",
+				yAxis: "0",
 			},
 			transform: {
-				rotate: "",
-				scale: "",
-				translate: "",
-				skew: "",
+				rotate: "0",
+				scale: "0",
+				translate: "0",
+				skew: "0",
 			},
 			filter: {
-				blur: "",
-				brightness: "",
-				contrast: "",
-				greyscale: "",
-				hueRotate: "",
-				dropShadow: "",
-				invert: "",
-				opacity: "",
-				saturate: "",
-				sepia: "",
+				blur: "0",
+				brightness: "0",
+				contrast: "0",
+				greyscale: "0",
+				hueRotate: "0",
+				dropShadow: "0",
+				invert: "0",
+				opacity: "0",
+				saturate: "0",
+				sepia: "0",
 			}
 		}
+	}
+
+	handlePlay = () => {
+		this.setState({
+			animation: {...this.state.animation, playState: "running" }
+		})
+	}
+	handlePause = () => {
+		this.setState({
+			animation: {...this.state.animation, playState: "paused" }
+		})
 	}
 
 		render() {
 			return (
 				<div>
-					<TestObject/>
+					<Box state={this.state} />
 					<ControlPanel/>
-					<PlayerRemote animation={this.state.animation} />
+					<PlayerRemote animation={this.state.animation} handlePause={this.handlePause} handlePlay={this.handlePlay} />
 			</div>
 		)
 	}
