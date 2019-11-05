@@ -82,12 +82,16 @@ export default class WorkBench extends Component {
 				playState: "running",
 			},
 			keyframes: {
-				stage: "0",
+				stage: {
+					beginning: "0%",
+					middle: "50%",
+					end: "100%"
+				},
 				xAxis: "0",
 				yAxis: "0",
 			},
 			transform: {
-				rotate: "360deg",
+				rotate: "110deg",
 				scale: "1.0",
 				translate: "0deg, 0deg",
 				skew: "0deg, 0deg",
@@ -107,7 +111,8 @@ export default class WorkBench extends Component {
 		}
 	}
 
-	handlePlay = () => {
+	handlePlay = (e) => {
+		console.log(e)
 		this.setState({
 			animation: {...this.state.animation, playState: "running" }
 		})
@@ -116,6 +121,29 @@ export default class WorkBench extends Component {
 		this.setState({
 			animation: {...this.state.animation, playState: "paused" }
 		})
+	}
+
+	handleLoop = () => {
+		if (this.state.animation.iterationCount === "infinite"){
+			this.setState({
+				animation: {...this.state.animation, iterationCount: "1"}
+			})
+		}
+		else if (this.state.animation.iterationCount === "1"){
+			this.setState({
+				animation: {...this.state.animation, iterationCount: "5"}
+			})
+		}
+		else if (this.state.animation.iterationCount === "5"){
+			this.setState({
+				animation: {...this.state.animation.iterationCount, iterationCount: "10"}
+			})
+		}
+		else if (this.state.animation.iterationCount === "10"){
+			this.setState({
+				animation: {...this.state.animation.iterationCount, iterationCount: "infinite"}
+			})
+		}
 	}
 
 		render() {
@@ -129,7 +157,12 @@ export default class WorkBench extends Component {
 						filter={this.state.filter}
 					/>
 					<ControlPanel/>
-					<PlayerRemote animation={this.state.animation} handlePause={this.handlePause} handlePlay={this.handlePlay} />
+					<PlayerRemote 
+						animation={this.state.animation} 
+						handlePause={this.handlePause} 
+						handlePlay={this.handlePlay} 
+						handleLoop={this.handleLoop}
+					/>
 			</div>
 		)
 	}

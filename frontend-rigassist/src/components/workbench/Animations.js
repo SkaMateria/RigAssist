@@ -1,38 +1,39 @@
-import styled, {keyframes} from 'styled-components'
+import {keyframes} from 'styled-components'
 
-// export const customAnimation = (props) = keyframes`
-// 	0% {
-// 		left:
-// 			40%;
-// 		top:
-// 			40%;
-// 		transform:
-// 			rotate(0turn) scale(0.2, .2) translate(0px, 0px) skew(0deg, 0deg);
-// 		filter:
-// 			blur(10px) contrast(10%);
-// 	}
-// 	50% {
-// 		filter:
-// 			blur(3px) contrast(80%) drop-shadow(10px 10px 4px black);
-// 	} 
+export function customAnimation(props){
+  return keyframes`
+    ${props.keyframes.stage.beginning} {
+      left:
+        40%;
+      top:
+        40%;
+      transform:
+        rotate(0turn) scale(0.2, .2) translate(0px, 0px) skew(0deg, 0deg);
+      filter:
+        blur(10px) contrast(10%);
+    }
+    ${props.keyframes.stage.middle} {
+      filter:
+        blur(3px) contrast(80%) drop-shadow(10px 10px 4px black);
+    } 
 
-// 	100% {
-// 		left:
-// 			50%;
-// 		top:
-// 			50%;
-// 		transform: 
-// 			rotate(3turn) scale(2.5, 1.0) translate(0px, 0px) skew(10deg, 10deg);
-// 		filter:
-// 			blur(1px) contrast(100%) drop-shadow(1px 1px 2px white);
-// 	}
-// `
+    ${props.keyframes.stage.end} {
+      left:
+        50%;
+      top:
+        50%;
+      transform: 
+        rotate(${props.transform.rotate}) scale(2.5, 1.0) translate(0px, 0px) skew(10deg, 10deg);
+      filter:
+        blur(1px) contrast(100%) drop-shadow(1px 1px 2px white);
+    }
+  `
+}
 
 
 
 
-
-//: You can import this specific animation wherever you like
+//: Use this one to test things out
 export function customAnimation2 (props) {
   return keyframes`
     0% {
