@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ControlPanel from './ControlPanel';
-import TestObject from '../components/workbench/TestObject'
 import PlayerRemote from '../components/workbench/PlayerRemote'
 import Box from '../components/workbench/Box'
 
