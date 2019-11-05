@@ -49,9 +49,15 @@ const customAnimation = keyframes`
 
 
   const Box = styled.div.attrs(prp => ({
-  shortHand: "2s ease-in-out infinite alternate",
-  superShort: `${prp.state.duration} ${prp.state.timingFunction} ${prp.state.delay} ${prp.state.iterationCount} ${prp.state.direction} ${prp.state.fillMode} ${prp.state.playState}`,
-	playState: prp.state.playState
+  superShort: `
+    ${prp.state.duration} 
+    ${prp.state.timingFunction} 
+    ${prp.state.delay} 
+    ${prp.state.iterationCount} 
+    ${prp.state.direction} 
+    ${prp.state.fillMode} 
+    ${prp.state.playState}
+    `
 }))`
 	width: 60px
 	height: 60px
