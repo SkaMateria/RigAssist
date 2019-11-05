@@ -3,7 +3,7 @@ import ControlPanel from './ControlPanel';
 import PlayerRemote from '../components/workbench/PlayerRemote'
 import Box from '../components/workbench/Box'
 
-/*//&___this.state DRAFT____
+	/*//&___this.state DRAFT____
 		 this.state = {
 			 objectOrigin: {
 				 xAxis: "50%",
@@ -47,7 +47,7 @@ import Box from '../components/workbench/Box'
 				 sepia: "0-100%",
 			 }
 		 }
-		 */
+	*/	
 export default class WorkBench extends Component {
 	constructor() {
 		super()
@@ -60,6 +60,17 @@ export default class WorkBench extends Component {
 				position: "fixed",
 				color: "red",
 			},
+			/*//& --NOTE(animation)--
+				UrlRef = https://www.w3schools.com/cssref/css3_pr_animation.asp
+				//* if the word has @ in front of it, it should read out "animation-" i.e. @duration = animation-duration
+				//: animation: name | @duration | @timing-function | @delay | @iteration-count | @direction | @fill-mode | @play-state
+				//! cubic-bezier: 0.0-1.0
+				//? duration: in seconds || timing-function: ease/linear/ease-in/ease-out/ease-in-out/cubic-bezier(n,n,n,n)
+				//? dealy: in seconds (can be negative) ||  iteration-count: 0 - infinite  ||  
+				//? direction: normal/reverse/alternate/alternate-reverse
+				//: fill-mode: none/forwards/backwards/both
+				//: play-state: paused/running/initial/inherit
+			*/
 			animation: {
 				name: "",
 				duration: "2s",

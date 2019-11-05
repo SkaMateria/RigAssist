@@ -5,12 +5,12 @@ export default class PlayerRemote extends Component {
     super(props)
     this.state = {
       playState: props.animation.playState,
-      // iterationCount: this.props.animation.iterationCount,
-      // direction: this.props.animation.direction,
+      iterationCount: props.animation.iterationCount,
+      direction: props.animation.direction,
     }
   }
 
-
+  
 
   render(){
     return(
