@@ -1,33 +1,32 @@
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
 
-/*//&---NOTE(Matrix Property)----
-	//: for transform: matrix combines scaleX, skewY, skewX, scaleY, translateX, translateY
-	//? matrix(1, -0.3, 0, 1, 0, 0)	 
-	*/
-const rotate = keyframes`
+const customAnimation = keyframes`
 	0% {
-		transform:
-			rotate(0turn) scale(0.2, .2) translate(0px, 0px) scaleX(0.2) skew(0deg, 0deg);
 		left:
 			0%;
 		top:
 			0%;
+		transform:
+			rotate(0turn) scale(0.2, .2) translate(0px, 0px) skew(0deg, 0deg);
 		filter:
-			blur(10px) contrast(0%);
-		visibility:
-			visible;
+			blur(10px) contrast(10%);
 	}
 
+	50% {
+		filter:
+			blur(3px) contrast(80%) drop-shadow(100px 100px 4px black);
+	} 
+
 	100% {
-		transform: 
-			rotate(360deg) scale(2.0, 2.0) translate(0px, 0px) scaleX(2.0) scaleY(3.0) skew(50deg, 100deg);
 		left:
 			50%;
 		top:
 			50%;
+		transform: 
+			rotate(3turn) scale(2.5, 1.0) translate(0px, 0px) skew(25deg, 10deg);
 		filter:
-			blur(0px) contrast(100%);
+			blur(1px) contrast(100%) drop-shadow(1px 1px 8px white);
 	}
 
 `
@@ -41,7 +40,7 @@ const rotate = keyframes`
 
 const Box = styled.div.attrs(props => ({
 	color: props.state.color,
-	animationLength: props.state.animationLength,
+	animationShortHand: props.state.animationShortHand,
 	animationPlayState: props.state.animationPlayState
 }))`
 	width: 60px
@@ -50,7 +49,7 @@ const Box = styled.div.attrs(props => ({
 	left: 50%
 	top: 50%
 	margin: 0 auto
-	animation: ${rotate} ${props => props.animationLength} ${props => props.animationPlayState}
+	animation: ${customAnimation} ${props => props.animationShortHand} ${props => props.animationPlayState}
 	background-color: ${props => props.color}
 `
 		/*//& --NOTE(animation)--
@@ -75,7 +74,7 @@ const Box = styled.div.attrs(props => ({
 			color: this.props.backgroundColor,
 			width: "64px",
 			height: "64px",
-			animationLength: "2s ease-in-out infinite normal",
+			animationShortHand: "2s ease-in-out infinite alternate",
 		}
 	}
 	

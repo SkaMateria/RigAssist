@@ -7,6 +7,7 @@
     "lodash": "^4.17.15",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-modal": "^3.11.1",
     "react-scripts": "3.2.0",
     "start": "^5.1.0",
     "styled-components": "^4.4.1"
