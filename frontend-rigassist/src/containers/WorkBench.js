@@ -53,21 +53,21 @@ export default class WorkBench extends Component {
 		super()
 		this.state = {
 			objectOrigin: {
-				xAxis: "0",
-				yAxis: "0",
-				width: "0",
-				height: "0",
-				position: "0",
-				color: "0",
+				xAxis: "0%",
+				yAxis: "0%",
+				width: "60px",
+				height: "60px",
+				position: "fixed",
+				color: "blue",
 			},
 			animation: {
-				name: "customAnimation",
-				duration: "0",
-				timingFunction: "0",
-				delay: "0",
-				iterationCount: "0",
-				direction: "0",
-				fillMode: "0",
+				name: "",
+				duration: "2s",
+				timingFunction: "ease-in-out",
+				delay: "0s",
+				iterationCount: "infinite",
+				direction: "alternate",
+				fillMode: "forwards",
 				playState: "running",
 			},
 			keyFrames: {
@@ -76,22 +76,22 @@ export default class WorkBench extends Component {
 				yAxis: "0",
 			},
 			transform: {
-				rotate: "0",
-				scale: "0",
-				translate: "0",
-				skew: "0",
+				rotate: "0deg",
+				scale: "1.0",
+				translate: "0deg, 0deg",
+				skew: "0deg, 0deg",
 			},
 			filter: {
-				blur: "0",
-				brightness: "0",
-				contrast: "0",
-				greyscale: "0",
-				hueRotate: "0",
-				dropShadow: "0",
-				invert: "0",
-				opacity: "0",
-				saturate: "0",
-				sepia: "0",
+				blur: "0px",
+				brightness: "0.0",
+				contrast: "0%",
+				greyscale: "0%",
+				hueRotate: "0deg",
+				dropShadow: "0px 0px 0px black",
+				invert: "0%",
+				opacity: "0%",
+				saturate: "0%",
+				sepia: "0%",
 			}
 		}
 	}
@@ -110,7 +110,7 @@ export default class WorkBench extends Component {
 		render() {
 			return (
 				<div>
-					<Box state={this.state} />
+					<Box state={this.state.animation} />
 					<ControlPanel/>
 					<PlayerRemote animation={this.state.animation} handlePause={this.handlePause} handlePlay={this.handlePlay} />
 			</div>
