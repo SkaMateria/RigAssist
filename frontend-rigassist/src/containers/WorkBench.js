@@ -76,7 +76,7 @@ export default class WorkBench extends Component {
 				yAxis: "0",
 			},
 			transform: {
-				rotate: "0deg",
+				rotate: "360deg",
 				scale: "1.0",
 				translate: "0deg, 0deg",
 				skew: "0deg, 0deg",

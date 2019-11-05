@@ -1,5 +1,5 @@
 import styled, {keyframes} from 'styled-components'
-import {customAnimation} from './Animations'
+import {customAnimation2} from './Animations'
 
   /*//& --NOTE(Properties)
     //! all of these will be followed by a :
@@ -32,13 +32,16 @@ import {customAnimation} from './Animations'
     ${props.animation.playState}
     `,
     object: props.object,
+    keyframes: props.keyframes,
+    transform: props.transform,
+    filter: props.filter,
 }))`
 	width: ${props => props.object.width}
 	height: ${props => props.object.height}
 	position: ${props => props.object.position}
 	left: ${props => props.object.left}
 	top: ${props => props.object.top}
-	animation: ${customAnimation} ${props => props.superShort}
+	animation: ${customAnimation2} ${props => props.superShort}
 	background-color: ${props => props.object.color}
 `
 
