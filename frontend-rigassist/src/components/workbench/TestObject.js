@@ -4,9 +4,9 @@ import styled, {keyframes} from 'styled-components'
 const customAnimation = keyframes`
 	0% {
 		left:
-			0%;
+			40%;
 		top:
-			0%;
+			40%;
 		transform:
 			rotate(0turn) scale(0.2, .2) translate(0px, 0px) skew(0deg, 0deg);
 		filter:
@@ -15,7 +15,7 @@ const customAnimation = keyframes`
 
 	50% {
 		filter:
-			blur(3px) contrast(80%) drop-shadow(100px 100px 4px black);
+			blur(3px) contrast(80%) drop-shadow(10px 10px 4px black);
 	} 
 
 	100% {
@@ -24,9 +24,9 @@ const customAnimation = keyframes`
 		top:
 			50%;
 		transform: 
-			rotate(3turn) scale(2.5, 1.0) translate(0px, 0px) skew(25deg, 10deg);
+			rotate(3turn) scale(2.5, 1.0) translate(0px, 0px) skew(10deg, 10deg);
 		filter:
-			blur(1px) contrast(100%) drop-shadow(1px 1px 8px white);
+			blur(1px) contrast(100%) drop-shadow(1px 1px 2px white);
 	}
 
 `
@@ -76,7 +76,7 @@ const Box = styled.div.attrs(props => ({
 			height: "64px",
 			animationShortHand: "2s ease-in-out infinite alternate",
 		}
-	}
+	} 
 	
 	buttonClick = () => {
 			this.state.animationPlayState === "running" ? this.pauseClick() : this.playClick()

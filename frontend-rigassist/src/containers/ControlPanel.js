@@ -10,4 +10,4 @@ export class ControlPanel extends Component {
 	}
 }
 
-export default ControlPanel
+export default ControlPanel     

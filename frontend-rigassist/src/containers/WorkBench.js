@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import ControlPanel from '../components/workbench/ControlPanel';
+import ControlPanel from './ControlPanel';
 import TestObject from '../components/workbench/TestObject'
-
-
+import PlayerRemote from '../components/workbench/PlayerRemote'
 
 export default class WorkBench extends Component {
 	constructor() {
@@ -96,12 +95,13 @@ export default class WorkBench extends Component {
 			}
 		}
 	}
-		
+
 		render() {
 			return (
 				<div>
-				<TestObject/>
-				<ControlPanel/>
+					<TestObject/>
+					<ControlPanel/>
+					<PlayerRemote animation={this.state.animation} />
 			</div>
 		)
 	}
