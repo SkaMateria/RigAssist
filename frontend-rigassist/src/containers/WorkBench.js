@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import ControlPanel from './ControlPanel';
-import styled from 'styled-components'
-import TestObject from '../components/TestObject'
+import ControlPanel from '../components/workbench/ControlPanel';
+import TestObject from '../components/workbench/TestObject'
 
 
 
@@ -101,7 +100,7 @@ export default class WorkBench extends Component {
 		render() {
 			return (
 				<div>
-				<TestObject backgroundColor={this.state.backgroundColor} />
+				<TestObject/>
 				<ControlPanel/>
 			</div>
 		)

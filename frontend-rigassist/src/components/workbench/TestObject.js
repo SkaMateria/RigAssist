@@ -50,7 +50,7 @@ const Box = styled.div.attrs(props => ({
 	top: 50%
 	margin: 0 auto
 	animation: ${customAnimation} ${props => props.animationShortHand} ${props => props.animationPlayState}
-	background-color: ${props => props.color}
+	background-color: blue
 `
 		/*//& --NOTE(animation)--
 			UrlRef = https://www.w3schools.com/cssref/css3_pr_animation.asp
