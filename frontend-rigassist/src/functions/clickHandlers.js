@@ -37,8 +37,9 @@ this.state = {
   },
   keyframes: {
     prct0: {
+      enabled: true,
       prct: "0%",
-          xAxis: "0",
+      xAxis: "0",
       yAxis: "0",
       transform: {
         rotate: "110deg",
@@ -60,6 +61,7 @@ this.state = {
       }
     },
     prct10: {
+      emabled: false,
       prct: "10%",
       xAxis: "0",
       yAxis: "0",
@@ -83,6 +85,7 @@ this.state = {
       }
     },
     prct20: {
+      emabled: false,
       prct: "20%",
       xAxis: "0",
       yAxis: "0",
@@ -106,6 +109,7 @@ this.state = {
       }
     },
     prct30: {
+      emabled: false,
       prct: "30%",
       xAxis: "0",
       yAxis: "0",
@@ -129,6 +133,7 @@ this.state = {
       }
     },
     prct40: {
+      emabled: false,
       prct: "40%",
       xAxis: "0",
       yAxis: "0",
@@ -152,6 +157,7 @@ this.state = {
       }
     },
     prct50: {
+      emabled: false,
       prct: "50%",
       xAxis: "0",
       yAxis: "0",
@@ -175,6 +181,7 @@ this.state = {
       }
     },
     prct60: {
+      emabled: false,
       prct: "60%",
       xAxis: "0",
       yAxis: "0",
@@ -198,6 +205,7 @@ this.state = {
       }
     },
     prct70: {
+      emabled: false,
       prct: "70%",
       xAxis: "0",
       yAxis: "0",
@@ -221,6 +229,7 @@ this.state = {
       }
     },
     prct80: {
+      emabled: false,
       prct: "80%",
       xAxis: "0",
       yAxis: "0",
@@ -244,6 +253,7 @@ this.state = {
       }
     },
     prct90: {
+      emabled: false,
       prct: "90%",
       xAxis: "0",
       yAxis: "0",
@@ -267,6 +277,7 @@ this.state = {
       }
     },
     prct100: {
+      enabled: true,
       prct: "100%",
       xAxis: "0",
       yAxis: "0",
