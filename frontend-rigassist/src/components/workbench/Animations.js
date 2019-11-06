@@ -32,7 +32,6 @@ export function customAnimation(props){
 
 
 
-
 //: Use this one to test things out
 export function customAnimation2 (props) {
   return keyframes`

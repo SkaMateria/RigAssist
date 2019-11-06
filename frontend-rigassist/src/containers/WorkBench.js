@@ -3,55 +3,11 @@ import ControlPanel from './ControlPanel';
 import PlayerRemote from '../components/workbench/PlayerRemote'
 import Box from '../components/workbench/Box'
 
-	/*//&___this.state DRAFT____
-		 this.state = {
-			 objectOrigin: {
-				 xAxis: "50%",
-				 yAxis: "50%",
-				 width: "60px",
-				 height: "60px",
-				 position: "fixed",
-				 color: "blue",
-			 },
-			 animation: {
-				 name: "Whatever",
-				 duration: "3s",
-				 timingFunction: "ease-in-out",
-				 delay: "0s",
-				 iterationCount: "infinite",
-				 direction: "alternate",
-				 fillMode: "forwards",
-				 playState: "running",
-			 },
-			 keyFrames: {
-				 stage: "beginning",
-				 xAxis: "0px",
-				 yAxis: "0px",
-			 },
-			 transform: {
-				 rotate: "360deg/1turn",
-				 scale: "1.0, 1.0",
-				 translate: "0px, 0px",
-				 skew: "10deg, 20deg",
-			 },
-			 filter: {
-				 blur: "1px",
-				 brightness: "0.0-infinite",
-				 contrast: "0%-infinite",
-				 greyscale: "0%-infinite",
-				 hueRotate: "0deg-360deg",
-				 dropShadow: "horizpx vertpx blurpx spreadpx color",
-				 invert: "0-100%",
-				 opacity: "0-100%",
-				 saturate: "0-infinite%",
-				 sepia: "0-100%",
-			 }
-		 }
-	*/	
 export default class WorkBench extends Component {
 	constructor() {
 		super()
 		this.state = {
+			stateChange: true,
 			objectOrigin: {
 				left: "50%",
 				top: "50%",
@@ -72,7 +28,7 @@ export default class WorkBench extends Component {
 				//: play-state: paused/running/initial/inherit
 			*/
 			animation: {
-				name: "",
+				name: "customAnimation",
 				duration: "2s",
 				timingFunction: "ease-in-out",
 				delay: "0s",
@@ -111,45 +67,60 @@ export default class WorkBench extends Component {
 		}
 	}
 
-	handlePlay = (e) => {
-		console.log(e)
+	handleStateChange = () => {
+    this.setState({
+      stateChange: !this.state.stateChange
+		})
+  }
+
+	handlePlay = () => {
 		this.setState({
 			animation: {...this.state.animation, playState: "running" }
 		})
 	}
+
 	handlePause = () => {
 		this.setState({
 			animation: {...this.state.animation, playState: "paused" }
 		})
 	}
-
+	
 	handleLoop = () => {
-		if (this.state.animation.iterationCount === "infinite"){
-			this.setState({
-				animation: {...this.state.animation, iterationCount: "1"}
-			})
+		if (this.state.animation.iterationCount === "5"){
+			this.loopInfinite();
+		} 
+		else if (this.state.animation.iterationCount === "infinite") {
+			this.outOfInfinite();
+		} else {
+			let newCount = parseInt(this.state.animation.iterationCount) + 1
+			this.setState(() => ({
+				animation: {
+					...this.state.animation,
+					iterationCount: newCount.toString()
+				}
+			}))
+			let boxElm = document.querySelector("#root > div > div:nth-child(3) > div.sc-bdVaJa.cSERZV")
+			
 		}
-		else if (this.state.animation.iterationCount === "1"){
-			this.setState({
-				animation: {...this.state.animation, iterationCount: "5"}
-			})
-		}
-		else if (this.state.animation.iterationCount === "5"){
-			this.setState({
-				animation: {...this.state.animation.iterationCount, iterationCount: "10"}
-			})
-		}
-		else if (this.state.animation.iterationCount === "10"){
-			this.setState({
-				animation: {...this.state.animation.iterationCount, iterationCount: "infinite"}
-			})
-		}
+	}
+
+	loopInfinite = () => {
+		this.setState({
+			animation: {...this.state.animation, iterationCount: "infinite"}
+		})
+	}
+
+	outOfInfinite = () => {
+		this.setState({
+			animation: {...this.state.animation, iterationCount: "1"}
+		})
 	}
 
 		render() {
 			return (
 				<div>
 					<Box 
+						key={this.state.stateChange}
 						object={this.state.objectOrigin}
 						animation={this.state.animation}
 						keyframes={this.state.keyframes}
@@ -158,6 +129,7 @@ export default class WorkBench extends Component {
 					/>
 					<ControlPanel/>
 					<PlayerRemote 
+						handleStateChange={this.handleStateChange}
 						animation={this.state.animation} 
 						handlePause={this.handlePause} 
 						handlePlay={this.handlePlay} 
