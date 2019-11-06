@@ -28,7 +28,31 @@ export function customAnimation1(props){
 
 
 
-//: Use this one to test things out
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//: _____________________________________________Use this one to test things out_______________________________________________________
+
+
 export function customAnimation2 (props) {
   return keyframes`
     ${props.keyframes.prct0.prct} {
