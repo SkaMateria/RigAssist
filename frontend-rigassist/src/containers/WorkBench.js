@@ -87,10 +87,20 @@ export default class WorkBench extends Component {
 	
 	handleLoop = () => {
 		if (this.state.animation.iterationCount === "5"){
-			this.loopInfinite();
+			const loopInfinite = () => {
+				this.setState({
+					animation: {...this.state.animation, iterationCount: "infinite"}
+				})
+			}
+			loopInfinite();
 		} 
 		else if (this.state.animation.iterationCount === "infinite") {
-			this.outOfInfinite();
+			const outOfInfinite = () => {
+				this.setState({
+					animation: {...this.state.animation, iterationCount: "1"}
+				})
+			}
+			outOfInfinite();
 		} else {
 			let newCount = parseInt(this.state.animation.iterationCount) + 1
 			this.setState(() => ({
@@ -100,18 +110,6 @@ export default class WorkBench extends Component {
 				}
 			}))
 		}
-	}
-
-	loopInfinite = () => {
-		this.setState({
-			animation: {...this.state.animation, iterationCount: "infinite"}
-		})
-	}
-
-	outOfInfinite = () => {
-		this.setState({
-			animation: {...this.state.animation, iterationCount: "1"}
-		})
 	}
 
 		render() {
