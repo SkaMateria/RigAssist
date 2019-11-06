@@ -37,15 +37,6 @@ export default class WorkBench extends Component {
 				fillMode: "forwards",
 				playState: "running",
 			},
-			keyframes: {
-				stage: {
-					prct0: "0%",
-					prct50: "50%",
-					prct100: "100%"
-				},
-				xAxis: "0",
-				yAxis: "0",
-			},
 			transform: {
 				rotate: "110deg",
 				scale: "1.0",
@@ -63,6 +54,272 @@ export default class WorkBench extends Component {
 				opacity: "0%",
 				saturate: "0%",
 				sepia: "0%",
+			},
+			keyframes: {
+				prct0: {
+					enabled: true,
+					prct: "0%",
+					left: "20%",
+					top: "20%",
+					transform: {
+						rotate: "0deg",
+						scale: "3.2, .2",
+						translate: "0px, 0px",
+						skew: "0deg, 0deg",
+					},
+					filter: {
+						blur: "10px",
+						brightness: "0.0",
+						contrast: "10%",
+						greyscale: "0%",
+						hueRotate: "0deg",
+						dropShadow: "0px 0px 0px black",
+						invert: "0%",
+						opacity: "0%",
+						saturate: "0%",
+						sepia: "0%",
+					}
+				},
+				prct10: {
+					emabled: false,
+					prct: "10%",
+					left: "0",
+					top: "0",
+					transform: {
+						rotate: "110deg",
+						scale: "1.0",
+						translate: "0deg, 0deg",
+						skew: "0deg, 0deg",
+					},
+					filter: {
+						blur: "0px",
+						brightness: "0.0",
+						contrast: "0%",
+						greyscale: "0%",
+						hueRotate: "0deg",
+						dropShadow: "0px 0px 0px black",
+						invert: "0%",
+						opacity: "0%",
+						saturate: "0%",
+						sepia: "0%",
+					}
+				},
+				prct20: {
+					emabled: false,
+					prct: "20%",
+					left: "0",
+					top: "0",
+					transform: {
+						rotate: "110deg",
+						scale: "1.0",
+						translate: "0deg, 0deg",
+						skew: "0deg, 0deg",
+					},
+					filter: {
+						blur: "0px",
+						brightness: "0.0",
+						contrast: "0%",
+						greyscale: "0%",
+						hueRotate: "0deg",
+						dropShadow: "0px 0px 0px black",
+						invert: "0%",
+						opacity: "0%",
+						saturate: "0%",
+						sepia: "0%",
+					}
+				},
+				prct30: {
+					emabled: false,
+					prct: "30%",
+					left: "0",
+					top: "0",
+					transform: {
+						rotate: "110deg",
+						scale: "1.0",
+						translate: "0deg, 0deg",
+						skew: "0deg, 0deg",
+					},
+					filter: {
+						blur: "0px",
+						brightness: "0.0",
+						contrast: "0%",
+						greyscale: "0%",
+						hueRotate: "0deg",
+						dropShadow: "0px 0px 0px black",
+						invert: "0%",
+						opacity: "0%",
+						saturate: "0%",
+						sepia: "0%",
+					}
+				},
+				prct40: {
+					emabled: false,
+					prct: "40%",
+					left: "0",
+					top: "0",
+					transform: {
+						rotate: "110deg",
+						scale: "1.0",
+						translate: "0deg, 0deg",
+						skew: "0deg, 0deg",
+					},
+					filter: {
+						blur: "0px",
+						brightness: "0.0",
+						contrast: "0%",
+						greyscale: "0%",
+						hueRotate: "0deg",
+						dropShadow: "0px 0px 0px black",
+						invert: "0%",
+						opacity: "0%",
+						saturate: "0%",
+						sepia: "0%",
+					}
+				},
+				prct50: {
+					emabled: false,
+					prct: "50%",
+					left: "0",
+					top: "0",
+					transform: {
+						rotate: "110deg",
+						scale: "1.0",
+						translate: "0deg, 0deg",
+						skew: "0deg, 0deg",
+					},
+					filter: {
+						blur: "0px",
+						brightness: "0.0",
+						contrast: "0%",
+						greyscale: "0%",
+						hueRotate: "0deg",
+						dropShadow: "0px 0px 0px black",
+						invert: "0%",
+						opacity: "0%",
+						saturate: "0%",
+						sepia: "0%",
+					}
+				},
+				prct60: {
+					emabled: false,
+					prct: "60%",
+					left: "0",
+					top: "0",
+					transform: {
+						rotate: "110deg",
+						scale: "1.0",
+						translate: "0deg, 0deg",
+						skew: "0deg, 0deg",
+					},
+					filter: {
+						blur: "0px",
+						brightness: "0.0",
+						contrast: "0%",
+						greyscale: "0%",
+						hueRotate: "0deg",
+						dropShadow: "0px 0px 0px black",
+						invert: "0%",
+						opacity: "0%",
+						saturate: "0%",
+						sepia: "0%",
+					}
+				},
+				prct70: {
+					emabled: false,
+					prct: "70%",
+					left: "0",
+					top: "0",
+					transform: {
+						rotate: "110deg",
+						scale: "1.0",
+						translate: "0deg, 0deg",
+						skew: "0deg, 0deg",
+					},
+					filter: {
+						blur: "0px",
+						brightness: "0.0",
+						contrast: "0%",
+						greyscale: "0%",
+						hueRotate: "0deg",
+						dropShadow: "0px 0px 0px black",
+						invert: "0%",
+						opacity: "0%",
+						saturate: "0%",
+						sepia: "0%",
+					}
+				},
+				prct80: {
+					emabled: false,
+					prct: "80%",
+					left: "0",
+					top: "0",
+					transform: {
+						rotate: "110deg",
+						scale: "1.0",
+						translate: "0deg, 0deg",
+						skew: "0deg, 0deg",
+					},
+					filter: {
+						blur: "0px",
+						brightness: "0.0",
+						contrast: "0%",
+						greyscale: "0%",
+						hueRotate: "0deg",
+						dropShadow: "0px 0px 0px black",
+						invert: "0%",
+						opacity: "0%",
+						saturate: "0%",
+						sepia: "0%",
+					}
+				},
+				prct90: {
+					emabled: false,
+					prct: "90%",
+					left: "0",
+					top: "0",
+					transform: {
+						rotate: "0deg",
+						scale: "1.0",
+						translate: "0deg, 0deg",
+						skew: "0deg, 0deg",
+					},
+					filter: {
+						blur: "0px",
+						brightness: "0.0",
+						contrast: "0%",
+						greyscale: "0%",
+						hueRotate: "0deg",
+						dropShadow: "0px 0px 0px black",
+						invert: "0%",
+						opacity: "0%",
+						saturate: "0%",
+						sepia: "0%",
+					}
+				},
+				prct100: {
+					enabled: true,
+					prct: "100%",
+					left: "50%",
+					top: "50%",
+					transform: {
+						rotate: "110deg",
+						scale: "2.5, 1.0",
+						translate: "0px, 0px",
+						skew: "10deg, 10deg",
+					},
+					filter: {
+						blur: "1px",
+						brightness: "0.0",
+						contrast: "100%",
+						greyscale: "0%",
+						hueRotate: "0deg",
+						dropShadow: "3px 3px 3px black",
+						invert: "0%",
+						opacity: "0%",
+						saturate: "0%",
+						sepia: "0%",
+					}
+				}
 			}
 		}
 	}
@@ -146,8 +403,8 @@ export default class WorkBench extends Component {
 		}
 	}
 
-		render() {
-			return (
+		render(){
+			return(
 				<div>
 					<Box 
 						key={this.state.stateChange}
@@ -167,6 +424,6 @@ export default class WorkBench extends Component {
 						animation={this.state.animation} 
 					/>
 			</div>
-		)
+			)
+		}
 	}
-}

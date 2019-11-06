@@ -1,31 +1,27 @@
 import {keyframes} from 'styled-components'
 
-export function customAnimation(props){
+export function customAnimation1(props){
   return keyframes`
     ${props.keyframes.prct0.prct} {
       left:
-        40%;
+        ${props.keyframes.prct0.left};
       top:
-        40%;
+        ${props.keyframes.prct0.top};
       transform:
-        rotate(0turn) scale(0.2, .2) translate(0px, 0px) skew(0deg, 0deg);
+        rotate(${props.keyframes.prct0.transform.rotate}) scale(${props.keyframes.prct0.transform.scale}) translate(${props.keyframes.prct0.transform.translate}) skew(${props.keyframes.prct0.transform.skew});
       filter:
-        blur(10px) contrast(10%);
+        blur(${props.keyframes.prct0.filter.blur}) contrast(${props.keyframes.prct0.filter.contrast});
     }
-    ${props.keyframes.prct50.prct} {
-      filter:
-        blur(3px) contrast(80%) drop-shadow(10px 10px 4px black);
-    } 
 
     ${props.keyframes.prct100.prct} {
       left:
-        50%;
+        ${props.keyframes.prct100.left};
       top:
-        50%;
+        ${props.keyframes.prct100.top};
       transform: 
-        rotate(${props.keyframes.prct100.transform.rotate}) scale(2.5, 1.0) translate(0px, 0px) skew(10deg, 10deg);
+        rotate(${props.keyframes.prct100.transform.rotate}) scale(${props.keyframes.prct100.transform.scale}) translate(${props.keyframes.prct100.transform.translate}) skew(${props.keyframes.prct100.transform.skew});
       filter:
-        blur(1px) contrast(100%) drop-shadow(1px 1px 2px white);
+        blur(${props.keyframes.prct100.filter.blur}) contrast(${props.keyframes.prct100.filter.contrast}) drop-shadow(${props.keyframes.prct100.filter.dropShadow});
     }
   `
 }
@@ -35,30 +31,26 @@ export function customAnimation(props){
 //: Use this one to test things out
 export function customAnimation2 (props) {
   return keyframes`
-    0% {
+    ${props.keyframes.prct0.prct} {
       left:
-        20%;
+        ${props.keyframes.prct0.left};
       top:
-        20%;
+        ${props.keyframes.prct0.top};
       transform:
-        rotate(0turn) scale(3.2, .2) translate(0px, 0px) skew(0deg, 0deg);
+      rotate(${props.keyframes.prct0.transform.rotate}) scale(${props.keyframes.prct0.transform.scale}) translate(${props.keyframes.prct0.transform.translate}) skew(${props.keyframes.prct0.transform.skew});
       filter:
-        blur(10px) contrast(10%);
+        blur(${props.keyframes.prct0.filter.blur}) contrast(${props.keyframes.prct0.filter.contrast}) drop-shadow(${props.keyframes.prct0.filter.dropShadow});
     }
-    50% {
-      filter:
-        blur(40px) contrast(80%) drop-shadow(10px 10px 4px green);
-    } 
 
-    100% {
+    ${props.keyframes.prct100.prct} {
       left:
-        50%;
+      ${props.keyframes.prct100.left};
       top:
-        50%;
+      ${props.keyframes.prct100.top};
       transform: 
-        rotate(${props.transform.rotate}) scale(2.5, 1.0) translate(0px, 0px) skew(10deg, 10deg);
+        rotate(${props.keyframes.prct100.transform.rotate}) scale(${props.keyframes.prct100.transform.scale}) translate(${props.keyframes.prct100.transform.translate}) skew(${props.keyframes.prct100.transform.skew});
       filter:
-        blur(1px) contrast(100%) drop-shadow(3px 3px 3px black);
+        blur(${props.keyframes.prct100.filter.blur}) contrast(${props.keyframes.prct100.filter.contrast}) drop-shadow(${props.keyframes.prct100.filter.dropShadow});
     }
   `
 }

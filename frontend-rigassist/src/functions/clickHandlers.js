@@ -1,4 +1,4 @@
-this.state = {
+  stateChange: true,
   objectOrigin: {
     left: "50%",
     top: "50%",
@@ -39,18 +39,18 @@ this.state = {
     prct0: {
       enabled: true,
       prct: "0%",
-      xAxis: "0",
-      yAxis: "0",
+      left: "20",
+      top: "20",
       transform: {
-        rotate: "110deg",
-        scale: "1.0",
-        translate: "0deg, 0deg",
+        rotate: "0deg",
+        scale: "3.2, .2",
+        translate: "0px, 0px",
         skew: "0deg, 0deg",
       },
       filter: {
-        blur: "0px",
+        blur: "10px",
         brightness: "0.0",
-        contrast: "0%",
+        contrast: "10%",
         greyscale: "0%",
         hueRotate: "0deg",
         dropShadow: "0px 0px 0px black",
@@ -63,8 +63,8 @@ this.state = {
     prct10: {
       emabled: false,
       prct: "10%",
-      xAxis: "0",
-      yAxis: "0",
+      left: "0",
+      top: "0",
       transform: {
         rotate: "110deg",
         scale: "1.0",
@@ -87,8 +87,8 @@ this.state = {
     prct20: {
       emabled: false,
       prct: "20%",
-      xAxis: "0",
-      yAxis: "0",
+      left: "0",
+      top: "0",
       transform: {
         rotate: "110deg",
         scale: "1.0",
@@ -111,8 +111,8 @@ this.state = {
     prct30: {
       emabled: false,
       prct: "30%",
-      xAxis: "0",
-      yAxis: "0",
+      left: "0",
+      top: "0",
       transform: {
         rotate: "110deg",
         scale: "1.0",
@@ -135,8 +135,8 @@ this.state = {
     prct40: {
       emabled: false,
       prct: "40%",
-      xAxis: "0",
-      yAxis: "0",
+      left: "0",
+      top: "0",
       transform: {
         rotate: "110deg",
         scale: "1.0",
@@ -159,8 +159,8 @@ this.state = {
     prct50: {
       emabled: false,
       prct: "50%",
-      xAxis: "0",
-      yAxis: "0",
+      left: "0",
+      top: "0",
       transform: {
         rotate: "110deg",
         scale: "1.0",
@@ -183,8 +183,8 @@ this.state = {
     prct60: {
       emabled: false,
       prct: "60%",
-      xAxis: "0",
-      yAxis: "0",
+      left: "0",
+      top: "0",
       transform: {
         rotate: "110deg",
         scale: "1.0",
@@ -207,8 +207,8 @@ this.state = {
     prct70: {
       emabled: false,
       prct: "70%",
-      xAxis: "0",
-      yAxis: "0",
+      left: "0",
+      top: "0",
       transform: {
         rotate: "110deg",
         scale: "1.0",
@@ -231,8 +231,8 @@ this.state = {
     prct80: {
       emabled: false,
       prct: "80%",
-      xAxis: "0",
-      yAxis: "0",
+      left: "0",
+      top: "0",
       transform: {
         rotate: "110deg",
         scale: "1.0",
@@ -255,10 +255,10 @@ this.state = {
     prct90: {
       emabled: false,
       prct: "90%",
-      xAxis: "0",
-      yAxis: "0",
+      left: "0",
+      top: "0",
       transform: {
-        rotate: "110deg",
+        rotate: "0deg",
         scale: "1.0",
         translate: "0deg, 0deg",
         skew: "0deg, 0deg",
@@ -279,25 +279,23 @@ this.state = {
     prct100: {
       enabled: true,
       prct: "100%",
-      xAxis: "0",
-      yAxis: "0",
+      left: "50%",
+      top: "50%",
       transform: {
         rotate: "110deg",
-        scale: "1.0",
+        scale: "2.5, 1.0",
         translate: "0deg, 0deg",
-        skew: "0deg, 0deg",
+        skew: "10deg, 10deg",
       },
       filter: {
-        blur: "0px",
+        blur: "1px",
         brightness: "0.0",
-        contrast: "0%",
+        contrast: "100%",
         greyscale: "0%",
         hueRotate: "0deg",
-        dropShadow: "0px 0px 0px black",
+        dropShadow: "3px 3px 3px black",
         invert: "0%",
         opacity: "0%",
         saturate: "0%",
         sepia: "0%",
       }
-    }
-  }
