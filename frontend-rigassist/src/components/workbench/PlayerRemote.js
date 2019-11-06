@@ -41,6 +41,3 @@ export default class PlayerRemote extends Component {
     )
   }
 }
-
-//? direction: normal/reverse/alternate/alternate-reverse
-//? loop 0-infite

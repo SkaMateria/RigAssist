@@ -4,6 +4,17 @@ import PlayerRemote from '../components/workbench/PlayerRemote'
 import Box from '../components/workbench/Box'
 
 export default class WorkBench extends Component {
+	/*//& --NOTE(animation)--
+		UrlRef = https://www.w3schools.com/cssref/css3_pr_animation.asp
+		//* if the word has @ in front of it, it should read out "animation-" i.e. @duration = animation-duration
+		//: animation: name | @duration | @timing-function | @delay | @iteration-count | @direction | @fill-mode | @play-state
+		//! cubic-bezier: 0.0-1.0
+		//? duration: in seconds || timing-function: ease/linear/ease-in/ease-out/ease-in-out/cubic-bezier(n,n,n,n)
+		//? dealy: in seconds (can be negative) ||  iteration-count: 0 - infinite  ||  
+		//? direction: normal/reverse/alternate/alternate-reverse
+		//: fill-mode: none/forwards/backwards/both
+		//: play-state: paused/running/initial/inherit
+	*/
 	constructor() {
 		super()
 		this.state = {
@@ -16,17 +27,6 @@ export default class WorkBench extends Component {
 				position: "fixed",
 				color: "red",
 			},
-			/*//& --NOTE(animation)--
-				UrlRef = https://www.w3schools.com/cssref/css3_pr_animation.asp
-				//* if the word has @ in front of it, it should read out "animation-" i.e. @duration = animation-duration
-				//: animation: name | @duration | @timing-function | @delay | @iteration-count | @direction | @fill-mode | @play-state
-				//! cubic-bezier: 0.0-1.0
-				//? duration: in seconds || timing-function: ease/linear/ease-in/ease-out/ease-in-out/cubic-bezier(n,n,n,n)
-				//? dealy: in seconds (can be negative) ||  iteration-count: 0 - infinite  ||  
-				//? direction: normal/reverse/alternate/alternate-reverse
-				//: fill-mode: none/forwards/backwards/both
-				//: play-state: paused/running/initial/inherit
-			*/
 			animation: {
 				name: "customAnimation",
 				duration: "2s",
@@ -39,9 +39,9 @@ export default class WorkBench extends Component {
 			},
 			keyframes: {
 				stage: {
-					beginning: "0%",
-					middle: "50%",
-					end: "100%"
+					prct0: "0%",
+					prct50: "50%",
+					prct100: "100%"
 				},
 				xAxis: "0",
 				yAxis: "0",
