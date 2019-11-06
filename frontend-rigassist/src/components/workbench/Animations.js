@@ -2,7 +2,7 @@ import {keyframes} from 'styled-components'
 
 export function customAnimation(props){
   return keyframes`
-    ${props.keyframes.stage.perct0} {
+    ${props.keyframes.prct0.prct} {
       left:
         40%;
       top:
@@ -12,18 +12,18 @@ export function customAnimation(props){
       filter:
         blur(10px) contrast(10%);
     }
-    ${props.keyframes.stage.perct50} {
+    ${props.keyframes.prct50.prct} {
       filter:
         blur(3px) contrast(80%) drop-shadow(10px 10px 4px black);
     } 
 
-    ${props.keyframes.stage.perct100} {
+    ${props.keyframes.prct100.prct} {
       left:
         50%;
       top:
         50%;
       transform: 
-        rotate(${props.transform.rotate}) scale(2.5, 1.0) translate(0px, 0px) skew(10deg, 10deg);
+        rotate(${props.keyframes.prct100.transform.rotate}) scale(2.5, 1.0) translate(0px, 0px) skew(10deg, 10deg);
       filter:
         blur(1px) contrast(100%) drop-shadow(1px 1px 2px white);
     }
