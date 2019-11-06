@@ -16,7 +16,7 @@ export default class PlayerRemote extends Component {
     return(
       <div>
         <button id="restartButton" onClick={this.props.handleStateChange}> RESTART </button>
-        <button id="playButton" onClick={this.props.handlePlay, this.stateChange}> PLAY </button>
+        <button id="playButton" onClick={this.props.handlePlay} > PLAY </button>
         <button id="pauseButton" onClick={this.props.handlePause} >PAUSE</button>
         <button id="loopButton" onClick={this.props.handleLoop} >LOOP SETTINGS</button>
         <button id="directionButton">DIRECTION SETTINGS</button>
