@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ControlPanel from './ControlPanel';
 import PlayerRemote from '../components/workbench/PlayerRemote'
 import Box from '../components/workbench/Box'
+import { handleStateChange, handlePlay, handlePause, handleLoop, loopInfinite, outOfInfinite } from '../functions/clickHandlers'
 
 export default class WorkBench extends Component {
 	constructor() {
@@ -67,54 +68,54 @@ export default class WorkBench extends Component {
 		}
 	}
 
-	handleStateChange = () => {
-    this.setState({
-      stateChange: !this.state.stateChange
-		})
-  }
+	// handleStateChange = () => {
+  //   this.setState({
+  //     stateChange: !this.state.stateChange
+	// 	})
+  // }
 
-	handlePlay = () => {
-		this.setState({
-			animation: {...this.state.animation, playState: "running" }
-		})
-	}
+	// handlePlay = () => {
+	// 	this.setState({
+	// 		animation: {...this.state.animation, playState: "running" }
+	// 	})
+	// }
 
-	handlePause = () => {
-		this.setState({
-			animation: {...this.state.animation, playState: "paused" }
-		})
-	}
+	// handlePause = () => {
+	// 	this.setState({
+	// 		animation: {...this.state.animation, playState: "paused" }
+	// 	})
+	// }
 	
-	handleLoop = () => {
-		if (this.state.animation.iterationCount === "5"){
-			this.loopInfinite();
-		} 
-		else if (this.state.animation.iterationCount === "infinite") {
-			this.outOfInfinite();
-		} else {
-			let newCount = parseInt(this.state.animation.iterationCount) + 1
-			this.setState(() => ({
-				animation: {
-					...this.state.animation,
-					iterationCount: newCount.toString()
-				}
-			}))
-			let boxElm = document.querySelector("#root > div > div:nth-child(3) > div.sc-bdVaJa.cSERZV")
+	// handleLoop = () => {
+	// 	if (this.state.animation.iterationCount === "5"){
+	// 		this.loopInfinite();
+	// 	} 
+	// 	else if (this.state.animation.iterationCount === "infinite") {
+	// 		this.outOfInfinite();
+	// 	} else {
+	// 		let newCount = parseInt(this.state.animation.iterationCount) + 1
+	// 		this.setState(() => ({
+	// 			animation: {
+	// 				...this.state.animation,
+	// 				iterationCount: newCount.toString()
+	// 			}
+	// 		}))
+	// 		let boxElm = document.querySelector("#root > div > div:nth-child(3) > div.sc-bdVaJa.cSERZV")
 			
-		}
-	}
+	// 	}
+	// }
 
-	loopInfinite = () => {
-		this.setState({
-			animation: {...this.state.animation, iterationCount: "infinite"}
-		})
-	}
+	// loopInfinite = () => {
+	// 	this.setState({
+	// 		animation: {...this.state.animation, iterationCount: "infinite"}
+	// 	})
+	// }
 
-	outOfInfinite = () => {
-		this.setState({
-			animation: {...this.state.animation, iterationCount: "1"}
-		})
-	}
+	// outOfInfinite = () => {
+	// 	this.setState({
+	// 		animation: {...this.state.animation, iterationCount: "1"}
+	// 	})
+	// }
 
 		render() {
 			return (
@@ -129,11 +130,15 @@ export default class WorkBench extends Component {
 					/>
 					<ControlPanel/>
 					<PlayerRemote 
-						handleStateChange={this.handleStateChange}
+						// handleStateChange={this.handleStateChange}
+						handleStateChange={handleStateChange}
 						animation={this.state.animation} 
-						handlePause={this.handlePause} 
-						handlePlay={this.handlePlay} 
-						handleLoop={this.handleLoop}
+						// handlePause={this.handlePause} 
+						handlePause={handlePause} 
+						// handlePlay={this.handlePlay} 
+						handlePlay={handlePlay} 
+						// handleLoop={this.handleLoop}
+						handleLoop={handleLoop}
 					/>
 			</div>
 		)
