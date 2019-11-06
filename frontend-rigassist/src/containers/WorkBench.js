@@ -112,6 +112,40 @@ export default class WorkBench extends Component {
 		}
 	}
 
+	handleDirection = () => {
+		if (this.state.animation.direction === "alternate"){
+			const altRev = () => {
+				this.setState({
+					animation: {...this.state.animation, direction: "alternate-reverse"}
+				})
+			}
+			altRev();
+		} 
+		else if (this.state.animation.direction === "alternate-reverse") {
+			const normal = () => {
+				this.setState({
+					animation: {...this.state.animation, direction: "normal"}
+				})
+			}
+			normal();
+		} 
+		else if (this.state.animation.direction === "normal") {
+			const reverse = () => {
+				this.setState({
+					animation: {...this.state.animation, direction: "reverse"}
+				})
+			}
+			reverse();
+		} else {
+			this.setState(() => ({
+				animation: {
+					...this.state.animation,
+					direction: "alternate"
+				}
+			}))
+		}
+	}
+
 		render() {
 			return (
 				<div>
@@ -126,10 +160,11 @@ export default class WorkBench extends Component {
 					<ControlPanel/>
 					<PlayerRemote 
 						handleStateChange={this.handleStateChange}
-						animation={this.state.animation} 
 						handlePause={this.handlePause} 
+						handleDirection={this.handleDirection}
 						handlePlay={this.handlePlay} 
 						handleLoop={this.handleLoop}
+						animation={this.state.animation} 
 					/>
 			</div>
 		)
