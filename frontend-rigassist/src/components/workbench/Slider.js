@@ -11,9 +11,9 @@ function log(value) {
  *: left: 0-100%
  *: top: 0-100%
  *? transform.rotate: -720deg - 720deg (90)
- *? transform.scale: "0.0, 0.0" - "3.0, 3.0" (.1)
  *: filter.blur: 0px - 20px
  *: filter.brightness: 0.0 - 1.0 (.1)
+ *: filter.contrast: 0-100%
  *? 
  *? 
  */

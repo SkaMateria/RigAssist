@@ -5,7 +5,7 @@
   width: 1500px;
   height: 200px;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
   padding: 50px;
   column-gap: 50px;
 }

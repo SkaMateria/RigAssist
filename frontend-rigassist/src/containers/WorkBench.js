@@ -407,6 +407,84 @@ export default class WorkBench extends Component {
 
 	handleSlider = (setting, value) => {
 		console.log(setting, value)
+		if (setting === "left") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct100: {
+						...prevState.keyframes.prct100,
+						left: `${value}%`
+					}
+				}
+			}))
+		}
+		else if (setting === "top") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct100: {
+						...prevState.keyframes.prct100,
+						top: `${value}%`
+					}
+				}
+			}))
+		}
+		else if (setting === "rotate") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct100: {
+						...prevState.keyframes.prct100,
+						transform: {
+							...prevState.keyframes.prct100.transform,
+							rotate: `${value*36}deg`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "blur") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct100: {
+						...prevState.keyframes.prct100,
+						filter: {
+							...prevState.keyframes.prct100.filter,
+							blur: `${Math.round(value/4)}px`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "brightness") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct100: {
+						...prevState.keyframes.prct100,
+						filter: {
+							...prevState.keyframes.prct100.filter,
+							brightness: `${(Math.round(value * 10) / 1000).toFixed(1)}`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "contrast") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct100: {
+						...prevState.keyframes.prct100,
+						filter: {
+							...prevState.keyframes.prct100.filter,
+							contrast: `${value}%`
+						}
+					}
+				}
+			}))
+		}
 	}
 
 
