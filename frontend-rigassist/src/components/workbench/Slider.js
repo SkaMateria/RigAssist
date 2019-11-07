@@ -21,7 +21,7 @@ export class AnimationSlider extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 50,
+      value: 0,
     };
   }
   onSliderChange = (value) => {
@@ -31,8 +31,12 @@ export class AnimationSlider extends Component {
     });
   }
   onAfterChange = (value) => {
-    console.log(value);
+    // console.log(value);
+    let x = this.props.setting()
+    this.props.sliderHandle(x, value)
   }
+
+
   render() {
     return (
       <Slider 

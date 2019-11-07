@@ -18,6 +18,7 @@ export default class WorkBench extends Component {
 	*/
 	constructor() {
 		super()
+		this.handleSlider = this.handleSlider.bind(this)
 		this.state = {
 			stateChange: true,
 			objectOrigin: {
@@ -404,6 +405,12 @@ export default class WorkBench extends Component {
 		}
 	}
 
+	handleSlider = (setting, value) => {
+		console.log(setting, value)
+	}
+
+
+
 		render(){
 			return(
 				<div>
@@ -423,7 +430,7 @@ export default class WorkBench extends Component {
 						handleLoop={this.handleLoop}
 						animation={this.state.animation} 
 					/>
-					<ControlPanel />
+					<ControlPanel handleSlider={this.handleSlider} />
 			</div>
 			)
 		}
