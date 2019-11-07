@@ -1,0 +1,12 @@
+.divGrid{
+  position: fixed;
+  left: 20%;
+  top: 80%;
+  width: 1500px;
+  height: 200px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 50px;
+  column-gap: 50px;
+}
+

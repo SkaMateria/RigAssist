@@ -3,6 +3,7 @@ import ControlPanel from './ControlPanel';
 import PlayerRemote from '../components/workbench/PlayerRemote'
 import Box from '../components/workbench/Box'
 
+
 export default class WorkBench extends Component {
 	/*//& --NOTE(animation)--
 		UrlRef = https://www.w3schools.com/cssref/css3_pr_animation.asp
@@ -414,7 +415,6 @@ export default class WorkBench extends Component {
 						transform={this.state.transform}
 						filter={this.state.filter}
 					/>
-					<ControlPanel/>
 					<PlayerRemote 
 						handleStateChange={this.handleStateChange}
 						handlePause={this.handlePause} 
@@ -423,6 +423,7 @@ export default class WorkBench extends Component {
 						handleLoop={this.handleLoop}
 						animation={this.state.animation} 
 					/>
+					<ControlPanel />
 			</div>
 			)
 		}
