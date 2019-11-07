@@ -4,6 +4,7 @@ import PlayerRemote from '../components/workbench/PlayerRemote'
 import Box from '../components/workbench/Box'
 
 
+
 export default class WorkBench extends Component {
 	/*//& --NOTE(animation)--
 		UrlRef = https://www.w3schools.com/cssref/css3_pr_animation.asp
@@ -311,7 +312,7 @@ export default class WorkBench extends Component {
 					},
 					filter: {
 						blur: "1px",
-						brightness: "0.0",
+						brightness: "1.0",
 						contrast: "100%",
 						greyscale: "0%",
 						hueRotate: "0deg",
@@ -465,7 +466,7 @@ export default class WorkBench extends Component {
 						...prevState.keyframes.prct100,
 						filter: {
 							...prevState.keyframes.prct100.filter,
-							brightness: `${(Math.round(value * 10) / 1000).toFixed(1)}`
+							brightness: `${(Math.round(value * 15) / 1000).toFixed(1)}`
 						}
 					}
 				}
