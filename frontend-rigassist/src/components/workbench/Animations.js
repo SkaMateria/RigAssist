@@ -1,7 +1,8 @@
 import {keyframes} from 'styled-components'
 
 export function customAnimation1(props){
-  return keyframes`
+  return (props.keyframes ? 
+    keyframes`
     ${props.keyframes.prct0.prct} {
       left:
         ${props.keyframes.prct0.left};
@@ -23,7 +24,7 @@ export function customAnimation1(props){
       filter:
         blur(${props.keyframes.prct100.filter.blur}) brightness(${props.keyframes.prct100.filter.brightness}) contrast(${props.keyframes.prct100.filter.contrast}) drop-shadow(${props.keyframes.prct100.filter.dropShadow});
     }
-  `
+  ` : null)
 }
 
 
