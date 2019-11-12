@@ -40970,3 +40970,68 @@ Migrating to CreateAnimations (20191030201936)
   [1m[36mAnimation Load (0.4ms)[0m  [1m[34mSELECT "animations".* FROM "animations" WHERE "animations"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
   [1m[36mProject Create (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("name", "user_id", "animation_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Project4"], ["user_id", 37], ["animation_id", 53], ["created_at", "2019-11-12 17:31:35.497691"], ["updated_at", "2019-11-12 17:31:35.497691"]]
   [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users" for ::1 at 2019-11-12 12:43:57 -0500
+Started GET "/projects" for ::1 at 2019-11-12 12:43:57 -0500
+Started GET "/animations" for ::1 at 2019-11-12 12:43:57 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnimationsController#index as */*
+  [1m[35m (13.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mAnimation Load (4.7ms)[0m  [1m[34mSELECT "animations".* FROM "animations"[0m
+  ↳ app/controllers/animations_controller.rb:3:in `index'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:3:in `index'
+  [1m[35m (42.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as */*
+Completed 200 OK in 46ms (Views: 17.0ms | ActiveRecord: 19.6ms | Allocations: 12343)
+
+
+  [1m[36mProject Load (10.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:3:in `index'
+Completed 200 OK in 57ms (Views: 9.2ms | ActiveRecord: 43.6ms | Allocations: 14278)
+
+
+Completed 200 OK in 48ms (Views: 13.1ms | ActiveRecord: 29.0ms | Allocations: 13606)
+
+
+Started GET "/" for ::1 at 2019-11-12 12:44:12 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.6.1/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.6.1/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.1ms | Allocations: 316)
+Completed 200 OK in 34ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 1599)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-11-12 12:44:13 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/animations" for ::1 at 2019-11-12 12:44:22 -0500
+Processing by AnimationsController#index as HTML
+  [1m[36mAnimation Load (5.5ms)[0m  [1m[34mSELECT "animations".* FROM "animations"[0m
+  ↳ app/controllers/animations_controller.rb:3:in `index'
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 5.5ms | Allocations: 1649)
+
+
