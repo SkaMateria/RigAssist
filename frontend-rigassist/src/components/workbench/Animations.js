@@ -10,7 +10,7 @@ export function customAnimation1(props){
       transform:
         rotate(${props.keyframes.prct0.transform.rotate}) scale(${props.keyframes.prct0.transform.scale}) translate(${props.keyframes.prct0.transform.translate}) skew(${props.keyframes.prct0.transform.skew});
       filter:
-        blur(${props.keyframes.prct0.filter.blur}) contrast(${props.keyframes.prct0.filter.contrast});
+        blur(${props.keyframes.prct0.filter.blur}) brightness(${props.keyframes.prct0.filter.brightness}) contrast(${props.keyframes.prct0.filter.contrast}) drop-shadow(${props.keyframes.prct0.filter.dropShadow});
     }
 
     ${props.keyframes.prct100.prct} {

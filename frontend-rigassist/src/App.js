@@ -38,7 +38,7 @@ class App extends React.Component {
 			<div>
 				<NavBar/>
 				<FolderNavigator/>
-				<WorkBench/>
+				<WorkBench settings={this.state.allAnimations.length === 0 ? null : this.state.allAnimations}/>
 			</div>
 		);
 	}
