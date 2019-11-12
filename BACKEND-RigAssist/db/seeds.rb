@@ -8,7 +8,7 @@ becka = User.find_or_create_by(username:"Becka", password:"password")
 taylor = User.find_or_create_by(username:"Taylor", password:"password")
 aaron = User.find_or_create_by(username:"Aaron", password:"password")
 
-button1 = Animation.find_or_create_by(name:"Button1", settings:"{rotateX: 20, color: blue, positionX: 3}")
+button1 = Animation.find_or_create_by(name:"Button1", settings:"{prct0: {enabled: true, prct: '0%', left: '20%', top: '20%', transform: {rotate: '0deg', scale: '3.2, .2', translate: '0px, 0px', skew: '0deg, 0deg'}, filter: {blur: '10px', brightness: '0.0', contrast: '10%', greyscale: '0%', hueRotate: '0deg', dropShadow: '0px 0px 0px black', invert: '0%', opacity: '0%', saturate: '0%', sepia: '0%'}}, prct100: {enabled: true, prct: '100%', left: '50%', top: '50%', transform: {rotate: '110deg', scale: '2.5, 1.0', translate: '0px, 0px', skew: '10deg, 10deg'}, filter: {blur: '1px', brightness: '1.0', contrast: '100%', greyscale: '0%', hueRotate: '0deg', dropShadow: '3px 3px 3px black', invert: '0%', opacity: '0%', saturate: '0%', sepia: '0%'}}}")
 button2 = Animation.find_or_create_by(name:"Button2", settings:"{rotateX: 20, color: blue, positionX: 3}")
 button3 = Animation.find_or_create_by(name:"Button3", settings:"{rotateX: 20, color: blue, positionX: 3}")
 button4 = Animation.find_or_create_by(name:"Button4", settings:"{rotateX: 20, color: blue, positionX: 3}")
