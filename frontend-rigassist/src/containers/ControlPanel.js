@@ -43,12 +43,12 @@ export class ControlPanel extends Component {
 	render() {
 		return (
 			<div className='divGrid' >
-				<div><AnimationSlider setting={this.leftSlide} sliderHandle={this.props.handleSlider}></AnimationSlider>X Axis</div>
-				<div><AnimationSlider setting={this.topSlide} sliderHandle={this.props.handleSlider}></AnimationSlider>Y Axis</div>
-				<div><AnimationSlider setting={this.rotateSlide} sliderHandle={this.props.handleSlider}></AnimationSlider>Rotation</div>
-				<div><AnimationSlider setting={this.blurSlide} sliderHandle={this.props.handleSlider} ></AnimationSlider>Blur</div>
-				<div><AnimationSlider setting={this.brightnessSlide} sliderHandle={this.props.handleSlider} ></AnimationSlider>Brightness</div>
-				<div><AnimationSlider setting={this.contrastSlide} sliderHandle={this.props.handleSlider} ></AnimationSlider>Contrast</div>
+				<div><AnimationSlider setting={this.leftSlide} sliderHandle={this.props.handleSlider}/>X Axis</div>
+				<div><AnimationSlider setting={this.topSlide} sliderHandle={this.props.handleSlider}/>Y Axis</div>
+				<div><AnimationSlider setting={this.rotateSlide} sliderHandle={this.props.handleSlider}/>Rotation</div>
+				<div><AnimationSlider setting={this.blurSlide} sliderHandle={this.props.handleSlider}/>Blur</div>
+				<div><AnimationSlider setting={this.brightnessSlide} sliderHandle={this.props.handleSlider}/>Brightness</div>
+				<div><AnimationSlider setting={this.contrastSlide} sliderHandle={this.props.handleSlider}/>Contrast</div>
 			</div>
 		)
 	}

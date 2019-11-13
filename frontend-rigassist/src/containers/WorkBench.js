@@ -3,7 +3,8 @@ import ControlPanel from './ControlPanel';
 import PlayerRemote from '../components/workbench/PlayerRemote'
 import Box from '../components/workbench/Box'
 
-
+const BASE_URL = "http://localhost:3001";
+const ANIMATIONS_URL = `${BASE_URL}/animations`
 
 export default class WorkBench extends Component {
 	/*//& --NOTE(animation)--
@@ -230,11 +231,36 @@ export default class WorkBench extends Component {
 		}
 	}
 
+	handlePost = (event, animation) => {
+		console.log(event, "working")
+		event.preventDefault();
+		fetch(ANIMATIONS_URL, {
+			method: "POST",
+			headers: {
+				"Content-Type": "applicaion/json",
+				"Accept": "application/json"
+			},
+			body: JSON.stringify(animation)
+		})
+	}
 
+	postGame = (event, newGame) => {
+    event.preventDefault();
+    event.target.reset();
+    fetch(URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(newGame)
+    })
+  }
 
 		render(){
 			return(
 				<div>
+					<button onClick={this.handlePost}>Save</button>
 					<Box 
 						key={this.state.stateChange}
 						object={this.state.objectOrigin}
