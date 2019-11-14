@@ -424,6 +424,14 @@ export default class WorkBench extends Component {
 			return(
 				<div>
 					{/* <button onClick={this.handlePost}>Save</button> */}
+					{/* <img src="../images/GoogleChromeicon.svg" 
+						key={this.state.stateChange}
+						object={this.state.objectOrigin}
+						animation={this.state.animation}
+						keyframes={this.state.keyframes}
+						transform={this.state.transform}
+						filter={this.state.filter}
+					/> */}
 					<Box 
 						key={this.state.stateChange}
 						object={this.state.objectOrigin}
