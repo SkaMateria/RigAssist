@@ -4,7 +4,7 @@ class AnimationsController < ApplicationController
     end
 
     def create
-        animation = Animation.create(params[:animation])
+        animation = Animation.create(settings: params['keyframes'])
         render json: animation
     end
 

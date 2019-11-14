@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {customAnimation1} from './Animations'
+import {customAnimation} from './Animations'
 
 /*//& --NOTE(Properties)
 	//! all of these will be followed by a :
@@ -41,7 +41,7 @@ import {customAnimation1} from './Animations'
 			position: ${props => props.object.position}
 			left: ${props => props.object.left}
 			top: ${props => props.object.top}
-			animation: ${customAnimation1} ${props => props.superShort}
+			animation: ${customAnimation} ${props => props.superShort}
 			background-color: ${props => props.object.color}
 		`
 

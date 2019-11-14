@@ -1,6 +1,6 @@
 import {keyframes} from 'styled-components'
 
-export function customAnimation1(props){
+export function customAnimation(props){
   return (props.keyframes ? 
     keyframes`
     ${props.keyframes.prct0.prct} {
@@ -11,7 +11,7 @@ export function customAnimation1(props){
       transform:
         rotate(${props.keyframes.prct0.transform.rotate}) scale(${props.keyframes.prct0.transform.scale}) translate(${props.keyframes.prct0.transform.translate}) skew(${props.keyframes.prct0.transform.skew});
       filter:
-        blur(${props.keyframes.prct0.filter.blur}) brightness(${props.keyframes.prct0.filter.brightness}) contrast(${props.keyframes.prct0.filter.contrast}) drop-shadow(${props.keyframes.prct0.filter.dropShadow});
+        blur(${props.keyframes.prct0.filter.blur}) opacity(${props.keyframes.prct0.filter.opacity}) brightness(${props.keyframes.prct0.filter.brightness}) contrast(${props.keyframes.prct0.filter.contrast}) drop-shadow(${props.keyframes.prct0.filter.dropShadow});
     }
 
     ${props.keyframes.prct100.prct} {
@@ -22,7 +22,7 @@ export function customAnimation1(props){
       transform: 
         rotate(${props.keyframes.prct100.transform.rotate}) scale(${props.keyframes.prct100.transform.scale}) translate(${props.keyframes.prct100.transform.translate}) skew(${props.keyframes.prct100.transform.skew});
       filter:
-        blur(${props.keyframes.prct100.filter.blur}) brightness(${props.keyframes.prct100.filter.brightness}) contrast(${props.keyframes.prct100.filter.contrast}) drop-shadow(${props.keyframes.prct100.filter.dropShadow});
+        blur(${props.keyframes.prct100.filter.blur}) opacity(${props.keyframes.prct100.filter.opacity}) brightness(${props.keyframes.prct100.filter.brightness}) contrast(${props.keyframes.prct100.filter.contrast}) drop-shadow(${props.keyframes.prct100.filter.dropShadow});
     }
   ` : null)
 }

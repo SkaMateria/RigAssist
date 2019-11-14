@@ -9,16 +9,21 @@ export class AnimationSlider extends Component {
     super(props);
     this.state = {
       value: 0,
+      animationStage: this.props.animationStage
     };
   }
   onSliderChange = (value) => {
+    console.log("what?")
     this.setState({
       value,
     });
   }
   onAfterChange = (value) => {
     let x = this.props.setting()
-    this.props.sliderHandle(x, value)
+    this.props.animationStage === 0 ? 
+      this.props.sliderHandle0(x, value)
+      :
+      this.props.sliderHandle100(x, value)
   }
 
 

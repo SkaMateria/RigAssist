@@ -20,7 +20,7 @@ export default class WorkBench extends Component {
 	*/
 	constructor(props) {
 		super()
-		this.handleSlider = this.handleSlider.bind(this)
+		this.handleSlider100 = this.handleSlider100.bind(this)
 		this.state = {
 			stateChange: true,
 			objectOrigin: {
@@ -42,7 +42,7 @@ export default class WorkBench extends Component {
 				playState: "running",
 			},
 			transform: {
-				rotate: "110deg",
+				rotate: "0deg",
 				scale: "1.0",
 				translate: "0deg, 0deg",
 				skew: "0deg, 0deg",
@@ -55,7 +55,7 @@ export default class WorkBench extends Component {
 				hueRotate: "0deg",
 				dropShadow: "0px 0px 0px black",
 				invert: "0%",
-				opacity: "0%",
+				opacity: "100%",
 				saturate: "0%",
 				sepia: "0%",
 			},
@@ -149,7 +149,116 @@ export default class WorkBench extends Component {
 		}
 	}
 
-	handleSlider = (setting, value) => {
+	handleSlider0 = (setting, value) => {
+		console.log(setting, value)
+		if (setting === "left") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct0: {
+						...prevState.keyframes.prct0,
+						left: `${value}%`
+					}
+				}
+			}))
+		}
+		else if (setting === "top") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct0: {
+						...prevState.keyframes.prct0,
+						top: `${value}%`
+					}
+				}
+			}))
+		}
+		else if (setting === "rotate") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct0: {
+						...prevState.keyframes.prct0,
+						transform: {
+							...prevState.keyframes.prct0.transform,
+							rotate: `${value*36}deg`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "scale") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct0: {
+						...prevState.keyframes.prct0,
+						transform: {
+							...prevState.keyframes.prct0.transform,
+							scale: `${(Math.round(value * 40) / 1000).toFixed(1)}`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "blur") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct0: {
+						...prevState.keyframes.prct0,
+						filter: {
+							...prevState.keyframes.prct0.filter,
+							blur: `${Math.round(value/4)}px`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "brightness") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct0: {
+						...prevState.keyframes.prct0,
+						filter: {
+							...prevState.keyframes.prct0.filter,
+							brightness: `${(Math.round(value * 15) / 1000).toFixed(1)}`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "contrast") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct0: {
+						...prevState.keyframes.prct0,
+						filter: {
+							...prevState.keyframes.prct0.filter,
+							contrast: `${value}%`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "opacity") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct0: {
+						...prevState.keyframes.prct0,
+						filter: {
+							...prevState.keyframes.prct0.filter,
+							opacity: `${value}%`
+						}
+					}
+				}
+			}))
+		}
+	}
+	handleSlider100 = (setting, value) => {
 		console.log(setting, value)
 		if (setting === "left") {
 			this.setState(prevState => ({
@@ -182,6 +291,20 @@ export default class WorkBench extends Component {
 						transform: {
 							...prevState.keyframes.prct100.transform,
 							rotate: `${value*36}deg`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "scale") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct100: {
+						...prevState.keyframes.prct100,
+						transform: {
+							...prevState.keyframes.prct100.transform,
+							scale: `${(Math.round(value * 40) / 1000).toFixed(1)}`
 						}
 					}
 				}
@@ -229,33 +352,36 @@ export default class WorkBench extends Component {
 				}
 			}))
 		}
+		else if (setting === "opacity") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct100: {
+						...prevState.keyframes.prct100,
+						filter: {
+							...prevState.keyframes.prct100.filter,
+							opacity: `${value}%`
+						}
+					}
+				}
+			}))
+		}
 	}
 
-	handlePost = (event, animation) => {
-		console.log(event, "working")
+	handlePost = (event) => {
+		console.log(event)
 		event.preventDefault();
 		fetch(ANIMATIONS_URL, {
 			method: "POST",
 			headers: {
-				"Content-Type": "applicaion/json",
+				"Content-Type": "application/json",
 				"Accept": "application/json"
 			},
-			body: JSON.stringify(animation)
+			body: JSON.stringify({keyframes: this.state.keyframes})
 		})
 	}
 
-	postGame = (event, newGame) => {
-    event.preventDefault();
-    event.target.reset();
-    fetch(URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify(newGame)
-    })
-  }
+
 
 		render(){
 			return(
@@ -277,7 +403,7 @@ export default class WorkBench extends Component {
 						handleLoop={this.handleLoop}
 						animation={this.state.animation} 
 					/>
-					<ControlPanel handleSlider={this.handleSlider} />
+					<ControlPanel handleSlider0={this.handleSlider0} handleSlider100={this.handleSlider100} />
 			</div>
 			)
 		}
