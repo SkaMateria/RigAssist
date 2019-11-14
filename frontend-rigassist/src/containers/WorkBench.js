@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ControlPanel from './ControlPanel';
 import PlayerRemote from '../components/workbench/PlayerRemote'
 import Box from '../components/workbench/Box'
+import ExportSetting from '../components/workbench/ExportSettings'
 
 const BASE_URL = "http://localhost:3001";
 const ANIMATIONS_URL = `${BASE_URL}/animations`
@@ -387,6 +388,7 @@ export default class WorkBench extends Component {
 			return(
 				<div>
 					<button onClick={this.handlePost}>Save</button>
+					<ExportSetting></ExportSetting>
 					<Box 
 						key={this.state.stateChange}
 						object={this.state.objectOrigin}

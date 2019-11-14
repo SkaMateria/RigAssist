@@ -21,7 +21,7 @@ import {customAnimation} from './Animations'
 */
 
   const Box = styled.div.attrs(props => ({
-		superShort: `
+		animationShortHand: `
 			${props.animation.duration} 
 			${props.animation.timingFunction} 
 			${props.animation.delay} 
@@ -41,7 +41,7 @@ import {customAnimation} from './Animations'
 			position: ${props => props.object.position}
 			left: ${props => props.object.left}
 			top: ${props => props.object.top}
-			animation: ${customAnimation} ${props => props.superShort}
+			animation: ${customAnimation} ${props => props.animationShortHand}
 			background-color: ${props => props.object.color}
 		`
 
