@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import ControlPanel from './ControlPanel';
 import PlayerRemote from '../components/workbench/PlayerRemote'
 import Box from '../components/workbench/Box'
-import ExportSetting from '../components/workbench/ExportSettings'
+import '../styles/PlayerRemote.css'
+
 
 const BASE_URL = "http://localhost:3001";
 const ANIMATIONS_URL = `${BASE_URL}/animations`
@@ -382,13 +383,16 @@ export default class WorkBench extends Component {
 		})
 	}
 
+		handleExportSettings = () => {
+
+		}
+
 
 
 		render(){
 			return(
 				<div>
-					<button onClick={this.handlePost}>Save</button>
-					<ExportSetting></ExportSetting>
+					{/* <button onClick={this.handlePost}>Save</button> */}
 					<Box 
 						key={this.state.stateChange}
 						object={this.state.objectOrigin}
@@ -397,15 +401,18 @@ export default class WorkBench extends Component {
 						transform={this.state.transform}
 						filter={this.state.filter}
 					/>
-					<PlayerRemote 
-						handleStateChange={this.handleStateChange}
-						handlePause={this.handlePause} 
-						handleDirection={this.handleDirection}
-						handlePlay={this.handlePlay} 
-						handleLoop={this.handleLoop}
-						animation={this.state.animation} 
-					/>
+					<div>
+						<PlayerRemote className='playerRemote'
+							handleStateChange={this.handleStateChange}
+							handlePause={this.handlePause} 
+							handleDirection={this.handleDirection}
+							handlePlay={this.handlePlay} 
+							handleLoop={this.handleLoop}
+							animation={this.state.animation} 
+						/>
+					</div>
 					<ControlPanel handleSlider0={this.handleSlider0} handleSlider100={this.handleSlider100} />
+					{/* <ExportSetting objectOrigin={this.state.objectOrigin} animation={this.state.animation} keyframes={this.state.keyframes}></ExportSetting> */}
 			</div>
 			)
 		}

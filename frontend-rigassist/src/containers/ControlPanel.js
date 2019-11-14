@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import AnimationSlider from '../components/workbench/Slider'
 import '../styles/ControlPanel.css'
+import '../styles/PlayerRemote.css'
 
 
 export class ControlPanel extends Component {

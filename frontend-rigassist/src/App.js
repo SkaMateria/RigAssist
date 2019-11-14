@@ -36,8 +36,8 @@ class App extends React.Component {
 	render(){
 		return (
 			<div>
-				<NavBar/>
-				<FolderNavigator/>
+				{/* <NavBar/> */}
+				{/* <FolderNavigator/> */}
 			{this.state.allAnimations.length > 0 ?	<WorkBench settings={this.state.allAnimations[0].settings}/> : null} 
 			</div>
 		);

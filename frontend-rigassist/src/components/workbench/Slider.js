@@ -13,7 +13,6 @@ export class AnimationSlider extends Component {
     };
   }
   onSliderChange = (value) => {
-    console.log("what?")
     this.setState({
       value,
     });
