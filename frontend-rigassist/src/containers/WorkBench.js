@@ -3,6 +3,7 @@ import ControlPanel from './ControlPanel';
 import PlayerRemote from '../components/workbench/PlayerRemote'
 import Box from '../components/workbench/Box'
 import '../styles/PlayerRemote.css'
+import ExportSettings from '../components/workbench/ExportSettings';
 
 
 const BASE_URL = "http://localhost:3001";
@@ -24,6 +25,7 @@ export default class WorkBench extends Component {
 		super()
 		this.handleSlider100 = this.handleSlider100.bind(this)
 		this.state = {
+			export: false,
 			stateChange: true,
 			objectOrigin: {
 				left: "50%",
@@ -384,12 +386,16 @@ export default class WorkBench extends Component {
 	}
 
 		handleExportSettings = () => {
-
+			this.setState({
+				export: !this.state.export
+			})
+			console.log(this.state.export)
 		}
 
 
 
 		render(){
+			if(this.state.export === false) {
 			return(
 				<div>
 					{/* <button onClick={this.handlePost}>Save</button> */}
@@ -412,8 +418,34 @@ export default class WorkBench extends Component {
 						/>
 					</div>
 					<ControlPanel handleSlider0={this.handleSlider0} handleSlider100={this.handleSlider100} />
-					{/* <ExportSetting objectOrigin={this.state.objectOrigin} animation={this.state.animation} keyframes={this.state.keyframes}></ExportSetting> */}
+					<button onClick={this.handleExportSettings} > Export Settings </button>
 			</div>
-			)
+			)}else {
+			return(
+				<div>
+					{/* <button onClick={this.handlePost}>Save</button> */}
+					<Box 
+						key={this.state.stateChange}
+						object={this.state.objectOrigin}
+						animation={this.state.animation}
+						keyframes={this.state.keyframes}
+						transform={this.state.transform}
+						filter={this.state.filter}
+					/>
+					<div>
+						<PlayerRemote className='playerRemote'
+							handleStateChange={this.handleStateChange}
+							handlePause={this.handlePause} 
+							handleDirection={this.handleDirection}
+							handlePlay={this.handlePlay} 
+							handleLoop={this.handleLoop}
+							animation={this.state.animation} 
+						/>
+					</div>
+					<ControlPanel handleSlider0={this.handleSlider0} handleSlider100={this.handleSlider100} />
+					<button onClick={this.handleExportSettings} > Export Settings </button>
+					<ExportSettings objectOrigin={this.state.objectOrigin} animation={this.state.animation} keyframes={this.state.keyframes} />
+			</div>
+			)}
 		}
 	}
