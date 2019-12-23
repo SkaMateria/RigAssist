@@ -155,7 +155,7 @@ DEPENDENCIES
   byebug
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
-  puma (>= 3.11)
+  puma (~> 4.3)
   rack-cors
   rails (~> 6.0.0)
   spring
