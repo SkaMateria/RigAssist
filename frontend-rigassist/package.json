@@ -3,18 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.6.0",
-    "futil": "^1.63.0",
+    "@material-ui/core": "^4.8.0",
+    "futil": "^1.65.0",
     "lodash": "^4.17.15",
     "rc-slider": "^8.7.1",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-modal": "^3.11.1",
-    "react-scripts": "3.2.0",
+    "react-scripts": "^3.3.0",
     "react-slider": "^1.0.1",
-    "semantic-ui-react": "^0.88.1",
+    "semantic-ui-react": "^0.88.2",
     "start": "^5.1.0",
-    "styled-components": "^4.4.1"
+    "styled-components": "^4.4.1",
+    "typescript": "^3.7.4"
   },
   "scripts": {
     "start": "react-scripts start",
