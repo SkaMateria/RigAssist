@@ -8,7 +8,7 @@ export class ControlPanel extends Component {
 	constructor(){
 		super()
 		this.state = {
-			animationStage: 100,
+			animationStage: 0,
 		}
 	}
 	

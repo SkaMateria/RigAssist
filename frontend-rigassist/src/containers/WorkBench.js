@@ -53,8 +53,8 @@ export default class WorkBench extends Component {
 			},
 			filter: {
 				blur: "0px",
-				brightness: "0.0",
-				contrast: "0%",
+				brightness: "1.0",
+				contrast: "100%",
 				greyscale: "0%",
 				hueRotate: "0deg",
 				dropShadow: "0px 0px 0px black",
