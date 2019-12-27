@@ -4,6 +4,8 @@ import PlayerRemote from '../components/workbench/PlayerRemote'
 import Box from '../components/workbench/Box'
 import '../styles/PlayerRemote.css'
 import ExportSettings from '../components/workbench/ExportSettings';
+import {Button, Icon} from 'semantic-ui-react'
+
 
 
 const BASE_URL = "http://localhost:3001";
@@ -418,7 +420,7 @@ export default class WorkBench extends Component {
 						/>
 					</div>
 					<ControlPanel handleSlider0={this.handleSlider0} handleSlider100={this.handleSlider100} />
-					<button onClick={this.handleExportSettings} > Export Settings </button>
+					<Button color='black' class="ui button" onClick={this.handleExportSettings} > <Icon name='code'/> Export Settings </Button>
 			</div>
 			)}else {
 			return(
@@ -451,7 +453,7 @@ export default class WorkBench extends Component {
 						/>
 					</div>
 					<ControlPanel handleSlider0={this.handleSlider0} handleSlider100={this.handleSlider100} />
-					<button onClick={this.handleExportSettings} > Export Settings </button>
+					<Button color='black' class="ui button" onClick={this.handleExportSettings} > <Icon name='code'/> Export Settings </Button>
 					<ExportSettings objectOrigin={this.state.objectOrigin} animation={this.state.animation} keyframes={this.state.keyframes} />
 			</div>
 			)}

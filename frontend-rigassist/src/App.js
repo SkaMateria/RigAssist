@@ -3,6 +3,7 @@ import './styles/App.css';
 import NavBar from './containers/NavBar'  
 import WorkBench from './containers/WorkBench';
 import FolderNavigator from './containers/FolderNavigator'
+import {Header, Icon} from 'semantic-ui-react'
 
 const BASE_URL = "http://localhost:3001";
 const USERS_URL = `${BASE_URL}/users`
@@ -38,6 +39,7 @@ class App extends React.Component {
 			<div>
 				{/* <NavBar/> */}
 				{/* <FolderNavigator/> */}
+				<Header as='h1' textAlign='center'> RigAssist</Header>
 			{this.state.allAnimations.length > 0 ?	<WorkBench settings={this.state.allAnimations[0].settings}/> : null} 
 			</div>
 		);

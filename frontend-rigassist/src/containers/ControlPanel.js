@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import AnimationSlider from '../components/workbench/Slider'
 import '../styles/ControlPanel.css'
 import '../styles/PlayerRemote.css'
+import {Button, Icon} from 'semantic-ui-react'
+
 
 
 export class ControlPanel extends Component {
@@ -68,7 +70,7 @@ export class ControlPanel extends Component {
 				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.brightnessSlide} sliderHandle0={this.props.handleSlider0} sliderHandle100={this.props.handleSlider100}/>Brightness</div>
 				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.contrastSlide} sliderHandle0={this.props.handleSlider0} sliderHandle100={this.props.handleSlider100}/>Contrast</div>
 			</div>
-			<button onClick={this.changeAnimationStage} >Animation Stage {this.state.animationStage}%</button>
+			<Button class="ui button" color='orange' onClick={this.changeAnimationStage} > <Icon name='percent'/> Animation Stage {this.state.animationStage}%</Button>
 			</div>
 		)
 	}
