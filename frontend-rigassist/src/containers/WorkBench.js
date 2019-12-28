@@ -264,6 +264,333 @@ export default class WorkBench extends Component {
 			}))
 		}
 	}
+	handleSlider25 = (setting, value) => {
+		console.log(setting, value)
+		if (setting === "left") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct25: {
+						...prevState.keyframes.prct25,
+						left: `${value}%`
+					}
+				}
+			}))
+		}
+		else if (setting === "top") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct25: {
+						...prevState.keyframes.prct25,
+						top: `${value}%`
+					}
+				}
+			}))
+		}
+		else if (setting === "rotate") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct25: {
+						...prevState.keyframes.prct25,
+						transform: {
+							...prevState.keyframes.prct25.transform,
+							rotate: `${value*36}deg`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "scale") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct25: {
+						...prevState.keyframes.prct25,
+						transform: {
+							...prevState.keyframes.prct25.transform,
+							scale: `${(Math.round(value * 40) / 1000).toFixed(1)}`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "blur") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct25: {
+						...prevState.keyframes.prct25,
+						filter: {
+							...prevState.keyframes.prct25.filter,
+							blur: `${Math.round(value/4)}px`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "brightness") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct25: {
+						...prevState.keyframes.prct25,
+						filter: {
+							...prevState.keyframes.prct25.filter,
+							brightness: `${(Math.round(value * 15) / 1000).toFixed(1)}`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "contrast") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct25: {
+						...prevState.keyframes.prct25,
+						filter: {
+							...prevState.keyframes.prct25.filter,
+							contrast: `${value}%`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "opacity") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct25: {
+						...prevState.keyframes.prct25,
+						filter: {
+							...prevState.keyframes.prct25.filter,
+							opacity: `${value}%`
+						}
+					}
+				}
+			}))
+		}
+	}
+	handleSlider50 = (setting, value) => {
+		console.log(setting, value)
+		if (setting === "left") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct50: {
+						...prevState.keyframes.prct50,
+						left: `${value}%`
+					}
+				}
+			}))
+		}
+		else if (setting === "top") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct50: {
+						...prevState.keyframes.prct50,
+						top: `${value}%`
+					}
+				}
+			}))
+		}
+		else if (setting === "rotate") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct50: {
+						...prevState.keyframes.prct50,
+						transform: {
+							...prevState.keyframes.prct50.transform,
+							rotate: `${value*36}deg`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "scale") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct50: {
+						...prevState.keyframes.prct50,
+						transform: {
+							...prevState.keyframes.prct50.transform,
+							scale: `${(Math.round(value * 40) / 1000).toFixed(1)}`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "blur") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct50: {
+						...prevState.keyframes.prct50,
+						filter: {
+							...prevState.keyframes.prct50.filter,
+							blur: `${Math.round(value/4)}px`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "brightness") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct50: {
+						...prevState.keyframes.prct50,
+						filter: {
+							...prevState.keyframes.prct50.filter,
+							brightness: `${(Math.round(value * 15) / 1000).toFixed(1)}`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "contrast") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct50: {
+						...prevState.keyframes.prct50,
+						filter: {
+							...prevState.keyframes.prct50.filter,
+							contrast: `${value}%`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "opacity") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct50: {
+						...prevState.keyframes.prct50,
+						filter: {
+							...prevState.keyframes.prct50.filter,
+							opacity: `${value}%`
+						}
+					}
+				}
+			}))
+		}
+	}
+	handleSlider75 = (setting, value) => {
+		console.log(setting, value)
+		if (setting === "left") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct75: {
+						...prevState.keyframes.prct75,
+						left: `${value}%`
+					}
+				}
+			}))
+		}
+		else if (setting === "top") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct75: {
+						...prevState.keyframes.prct75,
+						top: `${value}%`
+					}
+				}
+			}))
+		}
+		else if (setting === "rotate") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct75: {
+						...prevState.keyframes.prct75,
+						transform: {
+							...prevState.keyframes.prct75.transform,
+							rotate: `${value*36}deg`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "scale") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct75: {
+						...prevState.keyframes.prct75,
+						transform: {
+							...prevState.keyframes.prct75.transform,
+							scale: `${(Math.round(value * 40) / 1000).toFixed(1)}`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "blur") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct75: {
+						...prevState.keyframes.prct75,
+						filter: {
+							...prevState.keyframes.prct75.filter,
+							blur: `${Math.round(value/4)}px`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "brightness") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct75: {
+						...prevState.keyframes.prct75,
+						filter: {
+							...prevState.keyframes.prct75.filter,
+							brightness: `${(Math.round(value * 15) / 1000).toFixed(1)}`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "contrast") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct75: {
+						...prevState.keyframes.prct75,
+						filter: {
+							...prevState.keyframes.prct75.filter,
+							contrast: `${value}%`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "opacity") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct75: {
+						...prevState.keyframes.prct75,
+						filter: {
+							...prevState.keyframes.prct75.filter,
+							opacity: `${value}%`
+						}
+					}
+				}
+			}))
+		}
+	}
 	handleSlider100 = (setting, value) => {
 		console.log(setting, value)
 		if (setting === "left") {
