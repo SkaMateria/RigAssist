@@ -3,6 +3,7 @@ import ControlPanel from './ControlPanel';
 import PlayerRemote from '../components/workbench/PlayerRemote'
 import Box from '../components/workbench/Box'
 import '../styles/PlayerRemote.css'
+import '../styles/ExportSettings.css'
 import ExportSettings from '../components/workbench/ExportSettings';
 import {Button, Icon} from 'semantic-ui-react'
 
@@ -39,7 +40,7 @@ export default class WorkBench extends Component {
 			},
 			animation: {
 				name: "customAnimation",
-				duration: "2s",
+				duration: "5s",
 				timingFunction: "ease-in-out",
 				delay: "0s",
 				iterationCount: "infinite",
@@ -726,7 +727,7 @@ export default class WorkBench extends Component {
 		render(){
 			if(this.state.export === false) {
 			return(
-				<div>
+				<div style={{ position: 'relative', zIndex: '1' }}>
 					{/* <button onClick={this.handlePost}>Save</button> */}
 					<Box 
 						key={this.state.stateChange}
@@ -751,7 +752,7 @@ export default class WorkBench extends Component {
 			</div>
 			)}else {
 			return(
-				<div>
+				<div style={{ position: 'relative', zIndex: '2' }}>
 					{/* <button onClick={this.handlePost}>Save</button> */}
 					{/* <img src="../images/GoogleChromeicon.svg" 
 						key={this.state.stateChange}
@@ -781,7 +782,7 @@ export default class WorkBench extends Component {
 					</div>
 					<ControlPanel handleSlider0={this.handleSlider0} handleSlider25={this.handleSlider25} handleSlider50={this.handleSlider50} handleSlider75={this.handleSlider75} handleSlider100={this.handleSlider100} />
 					<Button color='black' class="ui button" onClick={this.handleExportSettings} > <Icon name='code'/> Export Settings </Button>
-					<ExportSettings objectOrigin={this.state.objectOrigin} animation={this.state.animation} keyframes={this.state.keyframes} />
+					<ExportSettings className='bringForward' objectOrigin={this.state.objectOrigin} animation={this.state.animation} keyframes={this.state.keyframes} />
 			</div>
 			)}
 		}
