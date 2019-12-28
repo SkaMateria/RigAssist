@@ -779,7 +779,7 @@ export default class WorkBench extends Component {
 							animation={this.state.animation} 
 						/>
 					</div>
-					<ControlPanel handleSlider0={this.handleSlider0} handleSlider100={this.handleSlider100} />
+					<ControlPanel handleSlider0={this.handleSlider0} handleSlider25={this.handleSlider25} handleSlider50={this.handleSlider50} handleSlider75={this.handleSlider75} handleSlider100={this.handleSlider100} />
 					<Button color='black' class="ui button" onClick={this.handleExportSettings} > <Icon name='code'/> Export Settings </Button>
 					<ExportSettings objectOrigin={this.state.objectOrigin} animation={this.state.animation} keyframes={this.state.keyframes} />
 			</div>
