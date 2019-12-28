@@ -1,10 +1,12 @@
 .exportsettings{
   margin-top: 10px;
-  margin-right: 80%;
+  margin-right: 70%;
   font-size: 1.1em;
   background-color: black;
   color: rgb(104, 243, 104);
-  padding-left: 8px;
+  padding-left: 10px;
+  position: absolute;
+  z-index: 100;
 }
 
 p{
@@ -20,8 +22,4 @@ p{
 .p3{
   margin: 1px;
   text-indent: 6em;
-}
-
-.bringForward{
-  z-index: -1;
 }
