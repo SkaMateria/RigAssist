@@ -89,14 +89,14 @@ export class ControlPanel extends Component {
 		return (
 			<div>
 			<div className='divGrid' > 
-				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.leftSlide} sliderHandle0={this.props.handleSlider0} sliderHandle100={this.props.handleSlider100}/>X Axis</div>
-				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.topSlide} sliderHandle0={this.props.handleSlider0} sliderHandle100={this.props.handleSlider100}/>Y Axis</div>
-				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.scaleSlide} sliderHandle0={this.props.handleSlider0} sliderHandle100={this.props.handleSlider100}/>Scale</div>
-				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.rotateSlide} sliderHandle0={this.props.handleSlider0} sliderHandle100={this.props.handleSlider100}/>Rotation</div>
-				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.blurSlide} sliderHandle0={this.props.handleSlider0} sliderHandle100={this.props.handleSlider100}/>Blur</div>
-				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.opacitySlide} sliderHandle0={this.props.handleSlider0} sliderHandle100={this.props.handleSlider100}/>Opacity</div>
-				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.brightnessSlide} sliderHandle0={this.props.handleSlider0} sliderHandle100={this.props.handleSlider100}/>Brightness</div>
-				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.contrastSlide} sliderHandle0={this.props.handleSlider0} sliderHandle100={this.props.handleSlider100}/>Contrast</div>
+				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.leftSlide} sliderHandle0={this.props.handleSlider0} sliderHandle25={this.props.handleSlider25} sliderHandle50={this.props.handleSlider50} sliderHandle75={this.props.handleSlider75} sliderHandle100={this.props.handleSlider100}/>X Axis</div>
+				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.topSlide} sliderHandle0={this.props.handleSlider0} sliderHandle25={this.props.handleSlider25} sliderHandle50={this.props.handleSlider50} sliderHandle75={this.props.handleSlider75} sliderHandle100={this.props.handleSlider100}/>Y Axis</div>
+				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.scaleSlide} sliderHandle0={this.props.handleSlider0} sliderHandle25={this.props.handleSlider25} sliderHandle50={this.props.handleSlider50} sliderHandle75={this.props.handleSlider75} sliderHandle100={this.props.handleSlider100}/>Scale</div>
+				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.rotateSlide} sliderHandle0={this.props.handleSlider0} sliderHandle25={this.props.handleSlider25} sliderHandle50={this.props.handleSlider50} sliderHandle75={this.props.handleSlider75} sliderHandle100={this.props.handleSlider100}/>Rotation</div>
+				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.blurSlide} sliderHandle0={this.props.handleSlider0} sliderHandle25={this.props.handleSlider25} sliderHandle50={this.props.handleSlider50} sliderHandle75={this.props.handleSlider75} sliderHandle100={this.props.handleSlider100}/>Blur</div>
+				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.opacitySlide} sliderHandle0={this.props.handleSlider0} sliderHandle25={this.props.handleSlider25} sliderHandle50={this.props.handleSlider50} sliderHandle75={this.props.handleSlider75} sliderHandle100={this.props.handleSlider100}/>Opacity</div>
+				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.brightnessSlide} sliderHandle0={this.props.handleSlider0} sliderHandle25={this.props.handleSlider25} sliderHandle50={this.props.handleSlider50} sliderHandle75={this.props.handleSlider75} sliderHandle100={this.props.handleSlider100}/>Brightness</div>
+				<div><AnimationSlider animationStage={this.state.animationStage} setting={this.contrastSlide} sliderHandle0={this.props.handleSlider0} sliderHandle25={this.props.handleSlider25} sliderHandle50={this.props.handleSlider50} sliderHandle75={this.props.handleSlider75} sliderHandle100={this.props.handleSlider100}/>Contrast</div>
 			</div>
 			<Button class="ui button" color='orange' onClick={this.changeAnimationStage} > <Icon name='percent'/> Animation Stage {this.state.animationStage}%</Button>
 			</div>
