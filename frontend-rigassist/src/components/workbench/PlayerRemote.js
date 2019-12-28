@@ -30,7 +30,7 @@ export default class PlayerRemote extends Component {
   }
 
 
-  render(){
+  render(){``
     return(
       <div>
         <Button class="ui button" color='olive' id="restartButton" onClick={this.props.handleStateChange} > <Icon name='undo'/> RESTART </Button>
