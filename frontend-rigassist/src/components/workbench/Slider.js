@@ -12,18 +12,12 @@ export class AnimationSlider extends Component {
       animationStage: this.props.animationStage
     };
   }
+
   onSliderChange = (value) => {
     this.setState({
       value,
     });
   }
-  // onAfterChange = (value) => {
-  //   let x = this.props.setting()
-  //   this.props.animationStage === 0 ? 
-  //     this.props.sliderHandle0(x, value)
-  //     :
-  //     this.props.sliderHandle100(x, value)
-  // }
   onAfterChange = (value) => {
     let x = this.props.setting()
     if (this.props.animationStage === 0) {
@@ -43,14 +37,36 @@ export class AnimationSlider extends Component {
     }
   }
 
+  testButton = () => {
+    if (this.props.animationStage === 0) {
+      console.log(parseInt(this.props.initialState.prct0.left))
+    }
+    if (this.props.animationStage === 25) {
+      console.log(this.props.initialState.prct25)
+    }
+    if (this.props.animationStage === 50) {
+      console.log(this.props.initialState.prct50)
+    }
+    if (this.props.animationStage === 75) {
+      console.log(this.props.initialState.prct75)
+    }
+    if (this.props.animationStage === 100) {
+      console.log(this.props.initialState.prct100)
+    }
+  }
+
 
   render() {
     return (
-      <Slider 
-        value={this.state.value}
-        onChange={this.onSliderChange} 
-        onAfterChange={this.onAfterChange}
-      />
+      <div>
+        <Slider 
+          defaultValue={parseInt(this.props.initialState.prct0.left)}
+          value={this.state.value}
+          onChange={this.onSliderChange} 
+          onAfterChange={this.onAfterChange}
+        />
+        <button onClick={this.testButton}>Testing</button>
+      </div>
     );
   }
 }
