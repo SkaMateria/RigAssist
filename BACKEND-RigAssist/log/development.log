@@ -57151,3 +57151,134 @@ Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.8ms | Allocations: 1650)
 Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 2.3ms | Allocations: 2352)
 
 
+Started GET "/users" for ::1 at 2019-12-28 07:10:56 -0500
+Started GET "/projects" for ::1 at 2019-12-28 07:10:56 -0500
+Started GET "/animations" for ::1 at 2019-12-28 07:10:56 -0500
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnimationsController#index as */*
+  [1m[35m (20.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as */*
+  [1m[36mAnimation Load (16.4ms)[0m  [1m[34mSELECT "animations".* FROM "animations"[0m
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/animations_controller.rb:3:in `index'
+  ↳ app/controllers/projects_controller.rb:3:in `index'
+Processing by UsersController#index as */*
+Completed 200 OK in 55ms (Views: 22.3ms | ActiveRecord: 25.0ms | Allocations: 10252)
+
+
+  [1m[36mUser Load (28.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Completed 200 OK in 80ms (Views: 17.3ms | ActiveRecord: 55.9ms | Allocations: 14378)
+
+
+Completed 200 OK in 114ms (Views: 20.5ms | ActiveRecord: 77.9ms | Allocations: 18867)
+
+
+Started GET "/users" for ::1 at 2019-12-28 07:13:00 -0500
+Started GET "/animations" for ::1 at 2019-12-28 07:13:00 -0500
+Started GET "/projects" for ::1 at 2019-12-28 07:13:00 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as */*
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (13.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnimationsController#index as */*
+  [1m[36mProject Load (7.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:3:in `index'
+Processing by UsersController#index as */*
+  [1m[36mAnimation Load (7.5ms)[0m  [1m[34mSELECT "animations".* FROM "animations"[0m
+  ↳ app/controllers/animations_controller.rb:3:in `index'
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Completed 200 OK in 67ms (Views: 28.3ms | ActiveRecord: 27.5ms | Allocations: 14189)
+
+
+Completed 200 OK in 42ms (Views: 14.5ms | ActiveRecord: 22.2ms | Allocations: 11549)
+
+
+Completed 200 OK in 58ms (Views: 15.5ms | ActiveRecord: 35.0ms | Allocations: 17405)
+
+
+Started GET "/users" for ::1 at 2019-12-28 07:14:20 -0500
+Processing by UsersController#index as */*
+Started GET "/projects" for ::1 at 2019-12-28 07:14:20 -0500
+Processing by ProjectsController#index as */*
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:3:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.7ms | Allocations: 1278)
+
+
+  [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Completed 200 OK in 15ms (Views: 3.3ms | ActiveRecord: 11.3ms | Allocations: 3208)
+
+
+Started GET "/animations" for ::1 at 2019-12-28 07:14:20 -0500
+Processing by AnimationsController#index as */*
+  [1m[36mAnimation Load (0.6ms)[0m  [1m[34mSELECT "animations".* FROM "animations"[0m
+  ↳ app/controllers/animations_controller.rb:3:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms | Allocations: 1600)
+
+
+Started GET "/users" for ::1 at 2019-12-28 07:14:20 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.7ms | Allocations: 1501)
+
+
+Started GET "/animations" for ::1 at 2019-12-28 07:14:20 -0500
+Processing by AnimationsController#index as */*
+Started GET "/projects" for ::1 at 2019-12-28 07:14:20 -0500
+  [1m[36mAnimation Load (3.3ms)[0m  [1m[34mSELECT "animations".* FROM "animations"[0m
+  ↳ app/controllers/animations_controller.rb:3:in `index'
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 3.3ms | Allocations: 1918)
+
+
+Processing by ProjectsController#index as */*
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:3:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 1.0ms | Allocations: 1290)
+
+
+Started GET "/users" for ::1 at 2019-12-28 07:14:23 -0500
+Started GET "/projects" for ::1 at 2019-12-28 07:14:23 -0500
+Started GET "/animations" for ::1 at 2019-12-28 07:14:23 -0500
+Processing by UsersController#index as */*
+Processing by ProjectsController#index as */*
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Processing by AnimationsController#index as */*
+  [1m[36mProject Load (4.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 2.2ms | Allocations: 2038)
+
+
+  ↳ app/controllers/projects_controller.rb:3:in `index'
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 4.0ms | Allocations: 3094)
+
+
+  [1m[36mAnimation Load (3.8ms)[0m  [1m[34mSELECT "animations".* FROM "animations"[0m
+  ↳ app/controllers/animations_controller.rb:3:in `index'
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 3.8ms | Allocations: 3129)
+
+
+Started GET "/users" for ::1 at 2019-12-28 07:16:13 -0500
+Started GET "/animations" for ::1 at 2019-12-28 07:16:13 -0500
+Started GET "/projects" for ::1 at 2019-12-28 07:16:13 -0500
+Processing by ProjectsController#index as */*
+Processing by AnimationsController#index as */*
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.8ms | Allocations: 1354)
+
+
+  [1m[36mProject Load (10.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/projects_controller.rb:3:in `index'
+Completed 200 OK in 14ms (Views: 3.0ms | ActiveRecord: 10.4ms | Allocations: 2926)
+
+
+  [1m[36mAnimation Load (11.4ms)[0m  [1m[34mSELECT "animations".* FROM "animations"[0m
+  ↳ app/controllers/animations_controller.rb:3:in `index'
+Completed 200 OK in 18ms (Views: 6.1ms | ActiveRecord: 11.4ms | Allocations: 4560)
+
+

@@ -727,7 +727,7 @@ export default class WorkBench extends Component {
 		render(){
 			if(this.state.export === false) {
 			return(
-				<div style={{ position: 'relative', zIndex: '1' }}>
+				<div>
 					{/* <button onClick={this.handlePost}>Save</button> */}
 					<Box 
 						key={this.state.stateChange}
@@ -752,7 +752,7 @@ export default class WorkBench extends Component {
 			</div>
 			)}else {
 			return(
-				<div style={{ position: 'relative', zIndex: '2' }}>
+				<div>
 					{/* <button onClick={this.handlePost}>Save</button> */}
 					{/* <img src="../images/GoogleChromeicon.svg" 
 						key={this.state.stateChange}
