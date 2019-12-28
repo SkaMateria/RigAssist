@@ -46,15 +46,43 @@ export class ControlPanel extends Component {
 		return "opacity"
 	}
 
+	// changeAnimationStage = () => {
+	// 	this.state.animationStage === 100 ? 
+	// 		this.setState({
+	// 			animationStage: 0
+	// 		})
+	// 		:
+	// 		this.setState({
+	// 			animationStage: 100
+	// 		})
+	// }
+
 	changeAnimationStage = () => {
-		this.state.animationStage === 100 ? 
+		if (this.state.animationStage === 0) {
 			this.setState({
-				animationStage: 0
+				animationStage: 25
 			})
-			:
+		}
+		else if (this.state.animationStage === 25) {
+			this.setState({
+				animationStage: 50
+			})
+		}
+		else if (this.state.animationStage === 50) {
+			this.setState({
+				animationStage: 75
+			})
+		}
+		else if (this.state.animationStage === 75) {
 			this.setState({
 				animationStage: 100
 			})
+		}
+		else if (this.state.animationStage === 100) {
+			this.setState({
+				animationStage: 0
+			})
+		}
 	}
 
 	render() {
