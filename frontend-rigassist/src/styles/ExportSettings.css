@@ -1,9 +1,12 @@
 .exportsettings{
   margin-top: 10px;
-  margin-right: 80%;
+  margin-right: 70%;
   font-size: 1.1em;
   background-color: black;
   color: rgb(104, 243, 104);
+  padding-left: 10px;
+  position: absolute;
+  z-index: 100;
 }
 
 p{

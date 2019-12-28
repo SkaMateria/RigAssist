@@ -3,6 +3,7 @@ import ControlPanel from './ControlPanel';
 import PlayerRemote from '../components/workbench/PlayerRemote'
 import Box from '../components/workbench/Box'
 import '../styles/PlayerRemote.css'
+import '../styles/ExportSettings.css'
 import ExportSettings from '../components/workbench/ExportSettings';
 import {Button, Icon} from 'semantic-ui-react'
 
@@ -39,7 +40,7 @@ export default class WorkBench extends Component {
 			},
 			animation: {
 				name: "customAnimation",
-				duration: "2s",
+				duration: "5s",
 				timingFunction: "ease-in-out",
 				delay: "0s",
 				iterationCount: "infinite",
@@ -264,6 +265,333 @@ export default class WorkBench extends Component {
 			}))
 		}
 	}
+	handleSlider25 = (setting, value) => {
+		console.log(setting, value)
+		if (setting === "left") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct25: {
+						...prevState.keyframes.prct25,
+						left: `${value}%`
+					}
+				}
+			}))
+		}
+		else if (setting === "top") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct25: {
+						...prevState.keyframes.prct25,
+						top: `${value}%`
+					}
+				}
+			}))
+		}
+		else if (setting === "rotate") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct25: {
+						...prevState.keyframes.prct25,
+						transform: {
+							...prevState.keyframes.prct25.transform,
+							rotate: `${value*36}deg`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "scale") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct25: {
+						...prevState.keyframes.prct25,
+						transform: {
+							...prevState.keyframes.prct25.transform,
+							scale: `${(Math.round(value * 40) / 1000).toFixed(1)}`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "blur") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct25: {
+						...prevState.keyframes.prct25,
+						filter: {
+							...prevState.keyframes.prct25.filter,
+							blur: `${Math.round(value/4)}px`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "brightness") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct25: {
+						...prevState.keyframes.prct25,
+						filter: {
+							...prevState.keyframes.prct25.filter,
+							brightness: `${(Math.round(value * 15) / 1000).toFixed(1)}`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "contrast") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct25: {
+						...prevState.keyframes.prct25,
+						filter: {
+							...prevState.keyframes.prct25.filter,
+							contrast: `${value}%`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "opacity") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct25: {
+						...prevState.keyframes.prct25,
+						filter: {
+							...prevState.keyframes.prct25.filter,
+							opacity: `${value}%`
+						}
+					}
+				}
+			}))
+		}
+	}
+	handleSlider50 = (setting, value) => {
+		console.log(setting, value)
+		if (setting === "left") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct50: {
+						...prevState.keyframes.prct50,
+						left: `${value}%`
+					}
+				}
+			}))
+		}
+		else if (setting === "top") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct50: {
+						...prevState.keyframes.prct50,
+						top: `${value}%`
+					}
+				}
+			}))
+		}
+		else if (setting === "rotate") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct50: {
+						...prevState.keyframes.prct50,
+						transform: {
+							...prevState.keyframes.prct50.transform,
+							rotate: `${value*36}deg`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "scale") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct50: {
+						...prevState.keyframes.prct50,
+						transform: {
+							...prevState.keyframes.prct50.transform,
+							scale: `${(Math.round(value * 40) / 1000).toFixed(1)}`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "blur") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct50: {
+						...prevState.keyframes.prct50,
+						filter: {
+							...prevState.keyframes.prct50.filter,
+							blur: `${Math.round(value/4)}px`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "brightness") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct50: {
+						...prevState.keyframes.prct50,
+						filter: {
+							...prevState.keyframes.prct50.filter,
+							brightness: `${(Math.round(value * 15) / 1000).toFixed(1)}`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "contrast") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct50: {
+						...prevState.keyframes.prct50,
+						filter: {
+							...prevState.keyframes.prct50.filter,
+							contrast: `${value}%`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "opacity") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct50: {
+						...prevState.keyframes.prct50,
+						filter: {
+							...prevState.keyframes.prct50.filter,
+							opacity: `${value}%`
+						}
+					}
+				}
+			}))
+		}
+	}
+	handleSlider75 = (setting, value) => {
+		console.log(setting, value)
+		if (setting === "left") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct75: {
+						...prevState.keyframes.prct75,
+						left: `${value}%`
+					}
+				}
+			}))
+		}
+		else if (setting === "top") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct75: {
+						...prevState.keyframes.prct75,
+						top: `${value}%`
+					}
+				}
+			}))
+		}
+		else if (setting === "rotate") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct75: {
+						...prevState.keyframes.prct75,
+						transform: {
+							...prevState.keyframes.prct75.transform,
+							rotate: `${value*36}deg`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "scale") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct75: {
+						...prevState.keyframes.prct75,
+						transform: {
+							...prevState.keyframes.prct75.transform,
+							scale: `${(Math.round(value * 40) / 1000).toFixed(1)}`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "blur") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct75: {
+						...prevState.keyframes.prct75,
+						filter: {
+							...prevState.keyframes.prct75.filter,
+							blur: `${Math.round(value/4)}px`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "brightness") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct75: {
+						...prevState.keyframes.prct75,
+						filter: {
+							...prevState.keyframes.prct75.filter,
+							brightness: `${(Math.round(value * 15) / 1000).toFixed(1)}`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "contrast") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct75: {
+						...prevState.keyframes.prct75,
+						filter: {
+							...prevState.keyframes.prct75.filter,
+							contrast: `${value}%`
+						}
+					}
+				}
+			}))
+		}
+		else if (setting === "opacity") {
+			this.setState(prevState => ({
+				keyframes: {
+					...prevState.keyframes,
+					prct75: {
+						...prevState.keyframes.prct75,
+						filter: {
+							...prevState.keyframes.prct75.filter,
+							opacity: `${value}%`
+						}
+					}
+				}
+			}))
+		}
+	}
 	handleSlider100 = (setting, value) => {
 		console.log(setting, value)
 		if (setting === "left") {
@@ -419,7 +747,7 @@ export default class WorkBench extends Component {
 							animation={this.state.animation} 
 						/>
 					</div>
-					<ControlPanel handleSlider0={this.handleSlider0} handleSlider100={this.handleSlider100} />
+					<ControlPanel handleSlider0={this.handleSlider0} handleSlider25={this.handleSlider25} handleSlider50={this.handleSlider50} handleSlider75={this.handleSlider75} handleSlider100={this.handleSlider100} />
 					<Button color='black' class="ui button" onClick={this.handleExportSettings} > <Icon name='code'/> Export Settings </Button>
 			</div>
 			)}else {
@@ -452,7 +780,7 @@ export default class WorkBench extends Component {
 							animation={this.state.animation} 
 						/>
 					</div>
-					<ControlPanel handleSlider0={this.handleSlider0} handleSlider100={this.handleSlider100} />
+					<ControlPanel handleSlider0={this.handleSlider0} handleSlider25={this.handleSlider25} handleSlider50={this.handleSlider50} handleSlider75={this.handleSlider75} handleSlider100={this.handleSlider100} />
 					<Button color='black' class="ui button" onClick={this.handleExportSettings} > <Icon name='code'/> Export Settings </Button>
 					<ExportSettings objectOrigin={this.state.objectOrigin} animation={this.state.animation} keyframes={this.state.keyframes} />
 			</div>
