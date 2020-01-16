@@ -1,2 +1,4 @@
 # RigAssist
-A helper tool for creating CSS animations in a more intuitive and user friendly way.
+A helper tool for people who want to create or learn to create complex CSS animations. The interface eliminates the need to know all the proper syntax through simple controls that automate the process for you. Currently, you're able to manipulate several properties of an object: xAxis, yAxis, rotation, scale(size), blur, brightness, color contrast, and opacity with many more on the way. 
+
+Currently working on a much more robust and powerful input interface with a focus on keeping it simple and intuitive, so we don't end up with a hundred sliders covering the screen. Honestly, a lot of the future features rely on that. I'm taking a lot of my inspiration from [Chris Johnson](https://github.com/jhnsnc) and his awesome [Knob Input Component](https://codepen.io/jhnsnc/pen/KXYayG). Putting a link directly to the repo [HERE](https://github.com/jhnsnc/precision-inputs/tree/master/docs).
